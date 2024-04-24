@@ -1,25 +1,55 @@
-html,
 body {
-  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #22648B;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
+.t-login {
+  width: 100%;
+  max-width: 400px;
+  margin: 400px;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff; /* Alterado para branco */
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.form-group label {
+  color: #fff; /* Alterado para branco */
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; /* Alterado para remover a borda */
+  border-radius: 4px;
+  background-color: #f5f5f5; /* Alterado para um tom de cinza mais claro */
+  margin-bottom: 10px; /* Adicionado espaçamento inferior */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none; /* Alterado para remover a borda */
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
 }
