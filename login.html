@@ -9,36 +9,23 @@
     <title>Login</title>
     <link rel="stylesheet" href="login-in.css">
 </head>
-
 <body>
-    <form class="t-login">
-       
+    <form class="t-login mx-auto">
         <h1 class="h3 mb-3 fw-normal">Login</h1>
 
         <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="Email ou nome de usuario">
         </div>
+
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <label for="floatingPassword">Senha</label><br>
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
         </div>
-
-        <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Remember me
-            </label>
-        </div>
-        <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.html';">Sign in</button>
+        <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.html';">Entrar</button><br><br>
+        <p>Esqueceu sua senha?</p>
+        <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se</a><br></p>
     </form>
-    <form class="t-login" action="php/process_form.php" method="post">
-        <!-- Seus campos de formulário aqui -->
-    </form>
-    
-
-
 </body>
-
 </html>
 

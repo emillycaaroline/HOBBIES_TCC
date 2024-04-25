@@ -1,19 +1,20 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #22648B;
+  background-color: #BEC6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .t-login {
   width: 100%;
   max-width: 400px;
-  margin: 400px;
-  margin: auto;
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .login-title {
   text-align: center;
@@ -52,4 +53,7 @@ body {
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+h1{
+  text-align: center;
 }
