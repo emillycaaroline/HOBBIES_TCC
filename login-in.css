@@ -1,25 +1,60 @@
-html,
 body {
-  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
+.t-login {
+  width: 100%;
+  max-width: 300px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 1px;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.form-signin input[type="password"] {
+.form-group label {
+  color: #fff;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; 
+  border-radius: 4px;
+  background-color: #f5f5f5; 
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+}
+
+.btn-primary {
+  background-color: #22648B;
+  border: none; 
+  width: 105%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color:#45CFB6
+}
+h1{
+  text-align: center;
 }
