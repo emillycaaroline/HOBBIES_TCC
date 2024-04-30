@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 auto;
 }
 
+
 .h-250 { height: 250px; }
 @media (min-width: 768px) {
   .h-md-250 { height: 250px; }
@@ -27,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Pagination */
 .blog-pagination {
   margin-bottom: 4rem;
-  background-color: blue;
+
 }
 
 /*
