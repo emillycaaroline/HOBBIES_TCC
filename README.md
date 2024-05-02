@@ -2,8 +2,11 @@
 
 ## Projeto de TCC sobre rotina e hobby.💡
 Nosso objetivo é criar uma ferramenta que ajude as pessoas a cuidarem melhor da sua saúde mental e a encontrarem um equilíbrio entre a organização do dia a dia e o lazer.
+## Através deste problema 
+- A falta de uma rotina específica ou menos cansativa é um problema muito grande que tem se mostrado um grande fator para a piora da saúde mental dos indivíduos na atualidade.
+- Falta de um hobbie ou atividades de lazer que proporcionem prazer ou relaxamento. 
 
-## ROUBBIE 📱
+## Decidimos cria o ROUBBIE 📱
 O ROUBBIE é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.
 
 ## Contribuição para a Saúde Mental 
