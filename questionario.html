@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
     <title>Perguntas</title>
-
+   <link rel="stylesheet" href="rotina.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
@@ -41,6 +41,7 @@
   .options {
       display: flex;
       flex-direction: column;
+   
   }
 
   .option {
@@ -53,14 +54,30 @@
       font-size: 16px;
       border-radius: 4px;
       color: #fff;
-      background-color: #007bff;
+      background-color:#22648B;
       border: none;
       cursor: pointer;
   }
 
   .btn-submit:hover {
-      background-color: #0056b3;
+      background-color: #B8F0DF;
   }
+  .form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
 </style>
 
     
@@ -83,7 +100,6 @@
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
       </symbol>
     </svg>
-
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
       <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
               id="bd-theme"
@@ -120,8 +136,8 @@
     </div>
 
     
-<header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<header class="paleta-azul" id="menup" data-bs-theme="dark">
+  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="inicio.html">Roubbie</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -154,7 +170,7 @@
   <!-- Perguntas -->
   <div class="question-container"><br><br>
     <div class="question">
-      <h1 class="question">Pergunta 1: Qual é a sua cor favorita?</h1>
+      <h1 class="question">Qual é a sua cor favorita?</h1>
       <div class="options">
           <div class="form-check option">
               <input class="form-check-input" type="radio" name="color1" id="option1" value="option1">
@@ -171,7 +187,7 @@
       </div>
     </div>
     <div class="question">
-      <h1 class="question">Pergunta 1: Qual é a sua cor favorita?</h1>
+      <h1 class="question">Qual é a sua cor favorita?</h1>
       <div class="options">
           <div class="form-check option">
               <input class="form-check-input" type="radio" name="color2" id="option1" value="option1">

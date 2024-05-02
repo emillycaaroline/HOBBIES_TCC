@@ -19,6 +19,11 @@
   }
 }
 
+
+.question h1{
+  color: #2470dc;
+  font-style: italic;
+}
 .sidebar .nav-link {
   font-size: .875rem;
   font-weight: 500;
