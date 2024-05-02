@@ -16,8 +16,11 @@ O ROUBBIE é um aplicativo desenvolvido para promover o bem-estar mental dos usu
 - **Acompanhamento Contínuo:** Acompanha o progresso dos usuários e ajusta as recomendações conforme suas necessidades e preferências mudam ao longo do tempo.
 
 ## Equipe 👩‍💻
-- Larissa Manrique
-- Emilly Caroline
-- Amanda Vitória
-- Ana Paula
-- Lara
+[Larissa Manrique](https://github.com/larissassk)  
+[Emilly Caroline](https://github.com/emillycaaroline)  
+[Amanda Vitória](https://github.com/amandvitoria)  
+[Ana Paula](https://github.com/anapaulacd)  
+[Lara](https://github.com/laraassuncao18)  
+[Vitoria](https://github.com/vickieww)   
+
+
