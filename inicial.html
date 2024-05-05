@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>Página Inicial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+  <link rel="stylesheet" href="blog.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+
+
+    .blog-header-logo:hover {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+      ;
+    }
+
+    nav{
+      color: white;
+      margin-top: 20px;
+      margin-left: 0px;
+    }
+
+    
+    .container-custom {
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 20px; /* Adiciona um preenchimento interno ao contêiner */
+    
+    }
+
+    .nav-scroller {
+  
+    padding: 10px 0; /* Altera o preenchimento vertical */
+    margin-bottom: 20px; /* Altera a margem inferior */
+    border-bottom: none; /* Remove a borda inferior */
+}
+
+.nav-link {
+  margin-right: 120px; /* Ajuste este valor conforme necessário para reduzir o espaço entre os ícones */
+  margin-left: 125px;
+}
+
+
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- simbolos  -->
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <!-- simbolo casa -->
+  <symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+
+  <!-- Simbolo calendario -->
+  <symbol id="table" viewBox="0 0 16 16">
+    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+    <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+  </symbol>
+
+  <!-- Simbolo três riscos -->
+  <symbol id="star" viewBox="0 0 16 10">
+    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
+  <path d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194z"/>
+  </symbol>
+
+</svg>
+
+
+
+
+ 
+
+
+  <div class="container-fluid">
+    
+    
+    <!-- Menu -->
+    <div class="nav-scroller py-1 mb-3 border-bottom">
+      <nav class="navbar navbar" style="background-color: #ba90ff;">
+
+        <!-- text-black-50= DEIXA O TEXTO CINZA -->
+
+        <a href="#" class="nav-link me-2">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+            Inicio
+          </a>
+
+          <a href="rotina.html" class="nav-link me-2 ">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+            Agenda
+          </a>
+
+          <a href="#" class="nav-link me-2">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+            Rotina
+          </a>
+
+          <a href="#" class="nav-link active me-2">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+            questionario
+          </a>
+
+          <a href="#" class="nav-link me-20">
+            <svg class="bi d-block mx-auto mb-1" width="30" height="30"><use xlink:href="#star"/></svg>
+            teste
+          </a>
+
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- Informações -->
+  <main class="container px-0">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+      <div class="col-lg-6 px-0">
+        <h1 class="display-4 fst-italic">ROUBBIES</h1>
+        <p class="lead my-3">O aplicativo "Roubbies" surge como uma solução para um problema frequente: a falta de hobbies e uma rotina saudável, que impactam negativamente a saúde mental. </p>
+        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue lendo...</a></p>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+            <h3 class="mb-0">A importância de ter um hobby para a saúde mental</h3>
+            <div class="mb-1 text-body-secondary">@psicologosberrini</div>
+            <p class="card-text mb-auto"></p>
+            <a href="https://www.psicologosberrini.com.br/blog/a-importancia-de-ter-um-hobby-para-a-saude-mental/" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="" />
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+            <h3 class="mb-0">Post title</h3>
+            <div class="mb-1 text-body-secondary">Nov 11</div>
+            <p class="mb-auto"></p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="#chevron-right" />
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-8">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          From the Firehose
+        </h3>
+
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Equilíbrio diário com o Roubbies</h2>
+          <p class="blog-post-meta">Por meio de um questionário simples, os usuários podem identificar seu perfil socioemocional. Com base nisso, o aplicativo gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada indivíduo. Isso inclui sugestões de atividades de lazer e momentos de relaxamento, visando melhorar a qualidade de vida e reduzir o estresse.</p>
+
+          <p>A proposta do "Roubbies" é simplificar o processo de desenvolvimento de uma rotina equilibrada e prazerosa. Ao oferecer recomendações personalizadas, o aplicativo ajuda os usuários a encontrar tempo para atividades que realmente lhes tragam satisfação.</p>
+          <hr>
+          <p> Além disso, o acompanhamento contínuo da rotina permite ajustes conforme necessário, garantindo que ela permaneça adequada às necessidades e preferências de cada indivíduo. </p>
+          </blockquote>
+        </article>
+
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Bem-Estar Mental Acessível</h2>
+          <p>Ao abordar questões relacionadas à saúde mental de maneira prática e acessível, o "Roubbies" se destaca como uma ferramenta valiosa para melhorar o bem-estar dos usuários. </p>
+          <blockquote>
+            <p>Ao incentivar a inclusão de hobbies e momentos de relaxamento na rotina diária, o aplicativo promove um estilo de vida mais equilibrado e satisfatório, contribuindo para uma melhor qualidade de vida a longo prazo.</p>
+
+        </article>
+
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Adicione texto</h2>
+          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+
+          <p>O aplicativo "Roubbies" oferece uma solução para a falta de hobbies e uma rotina saudável, visando melhorar a saúde mental dos usuários. Por meio de um questionário simples, o app gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada pessoa.</p>
+
+          <p> Ele inclui sugestões de atividades de lazer e relaxamento para promover o equilíbrio e reduzir o estresse. Com recomendações personalizadas e acompanhamento contínuo, o "Roubbies" torna mais fácil e acessível desenvolver uma rotina equilibrada e prazerosa, contribuindo para o bem-estar mental a longo prazo.</p>
+        </article>
+
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+        </nav>
+
+      </div>
+      <div class="p-4">
+        <h4 class="fst-italic">Sobre nós</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </main>
+
+  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p class="mb-0">
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
