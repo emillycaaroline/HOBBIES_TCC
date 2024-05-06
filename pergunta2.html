@@ -108,14 +108,50 @@
 
     nav {
       color: white;
+      margin-top: 20px;
       margin-left: 0px;
     }
 
 
- 
+    .container-custom {
+      max-width: 1200px;
+      /* Define a largura máxima do contêiner */
+      margin: 0 auto;
+      /* Centraliza o contêiner na página */
+      padding: 20px;
+      /* Adiciona um preenchimento interno ao contêiner */
+
+    }
+
+    .nav-scroller {
+
+      padding: 15px 0;
+      /* Altera o preenchimento vertical */
+      margin-bottom: 28px;
+      /* Altera a margem inferior */
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+
+    .nav-link {
+      margin-right: 120px;
+      /* Ajuste este valor conforme necessário para reduzir o espaço entre os ícones */
+      margin-left: 125px;
+    }
+
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+
     .nav-link.active {
       border-bottom: 3px solid #46d9b4;
       /* Adicione um risco embaixo quando o link estiver ativo */
+    }
+
+    .h1 {
+      color: #b7ffee;
+      font-style: oblique;
     }
 
     /* alinha as perguntas no centro */
@@ -207,8 +243,8 @@
 
             <!-- ---------------------------------- -->
           <li class="nav-item">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table" />
+            <svg class="bi d-block mx-auto mb-1 active " width="24" height="24">
+                <use xlink:href="#home" />
               </svg>
             <a class="nav-link active" aria-current="page" href="inicio.html">Home</a>
           </li>
@@ -223,23 +259,23 @@
 
           <!-- ------------------------------------------ -->
           <li class="nav-item">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table" />
+            <svg class="bi d-block mx-auto mb-1" style="color: aqua;"  width="24" height="24">
+                <use xlink:href="#pranp" />
               </svg>
             <a class="nav-link" href="rotina.html">Questionário</a>
           </li>
 
           <!-- ------------------------------------------------- -->
           <li class="nav-item">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table" />
+            <svg class="bi d-block mx-auto mb-1" width="30" height="30">
+                <use xlink:href="#star" />
               </svg>
             <a class="nav-link" href="rotina.html">Teste</a>
           </li>
 
           <!-- ------------------------------ -->
           <li class="nav-item">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+            <svg class="bi d-block mx-auto mb-1 me-20" width="24" height="24">
                 <use xlink:href="#table" />
               </svg>
             <a class="nav-link" href="rotina.html">Sobre</a>
