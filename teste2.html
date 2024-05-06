@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>TESTE</title>
+   <link rel="stylesheet" href="rotina.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 60px;
+  }
+
+  .question-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+
+  .options {
+      display: flex;
+      flex-direction: column;
+   
+  }
+
+  .option {
+      margin-bottom: 10px;
+  }
+
+  .btn-submit {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      color: #fff;
+      background-color:#22648B;
+      border: none;
+      cursor: pointer;
+  }
+
+  .btn-submit:hover {
+      background-color: #B8F0DF;
+  }
+  .form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
+/* ---------------------------------------------------------- */
+
+.bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+
+
+    .blog-header-logo:hover {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+      ;
+    }
+
+    nav {
+      color: white;
+      margin-left: 0px;
+    }
+
+
+    .container-custom {
+      max-width: 1200px;
+      /* Define a largura máxima do contêiner */
+      margin: 0 auto;
+      /* Centraliza o contêiner na página */
+      padding: 20px;
+      /* Adiciona um preenchimento interno ao contêiner */
+
+    }
+
+   
+
+    .nav-link {
+      margin-right: 150px;
+      /* Ajuste este valor conforme necessário para reduzir o espaço entre os ícones */
+      margin-left: 140px;
+    }
+
+   
+
+    .nav-link.active {
+      border-bottom: 3px solid #9da09f;
+      /* Adicione um risco embaixo quando o link estiver ativo */
+    }
+
+    
+
+svg{
+  color: white;
+}
+
+h6{
+  color: white;
+}
+
+
+
+</style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <!-- simbolo casa -->
+      <symbol id="home" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+      </symbol>
+  
+      <!-- pintada -->
+      <symbol id="homep" viewBox="0 0 16 16">
+        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+      </symbol>
+  
+  
+  
+  
+      <!-- Simbolo calendario -->
+      <symbol id="table" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+        <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+      </symbol>
+      <!-- pintada -->
+      <symbol id="tablep" viewBox="0 0 16 16">
+        <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5m3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5M2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
+      </symbol>
+  
+  
+  
+      <!-- Simbolo três riscos -->
+      <symbol id="star" viewBox="0 0 16 10">
+        <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5" />
+        <path d="M2.242 2.194a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.256-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194zm0 4a.27.27 0 0 1 .516 0l.162.53c.035.115.14.194.258.194h.551c.259 0 .37.333.164.493l-.468.363a.28.28 0 0 0-.094.3l.173.569c.078.255-.213.462-.423.3l-.417-.324a.27.27 0 0 0-.328 0l-.417.323c-.21.163-.5-.043-.423-.299l.173-.57a.28.28 0 0 0-.094-.299l-.468-.363c-.206-.16-.095-.493.164-.493h.55a.27.27 0 0 0 .259-.194z" />
+      </symbol>
+  
+      <!-- simbolo de Informações -->
+      <symbol id="info" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+      </symbol>
+      <!-- pintada -->
+      <symbol id="infop" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+      </symbol>
+  
+  
+  
+  
+      <!-- Simbolo prancheta -->
+      <symbol id="pran" viewBox="0 0 16 16">
+        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z" />
+        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z" />
+        <path d="M8.5 6.5a.5.5 0 0 0-1 0V8H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V9H10a.5.5 0 0 0 0-1H8.5z" />
+      </symbol>
+  
+      <!-- pintada -->
+      <symbol id="pranp" viewBox="0 0 16 16">
+        <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
+        <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M8.5 6.5V8H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V9H6a.5.5 0 0 1 0-1h1.5V6.5a.5.5 0 0 1 1 0" />
+      </symbol>
+  
+    </svg>
+
+
+
+    
+<header class="paleta-azul" id="menup" data-bs-theme="dark">
+  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #22648B;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="inicio.html">Roubbie</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse" >
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+
+
+                      <!-- ---------------------------------- -->
+                      <a href="Inicio2.html" class="nav-link me-2">
+                        <svg class="bi d-block mx-auto mb-1 active " width="24" height="24">
+                          <use xlink:href="#home" />
+                        </svg>
+                        <h6 > Inicio</h6>
+                      </a>
+            
+                      <!-- ------------------------------------ -->
+                      <a href="agenda2.html" class="nav-link me-2">
+                        <svg class="bi d-block mx-auto mb-1 active " width="24" height="24">
+                          <use xlink:href="#table" />
+                        </svg>
+                        <h6 > Agenda</h6>
+                      </a>
+            
+                      <!-- ------------------------------------------ -->
+                      <!-- <a href="perguntas.html" class="nav-link active  me-2">
+                        <svg class="bi d-block mx-auto mb-1" style="color: rgb(191, 199, 199);"  width="24" height="24">
+                          <use xlink:href="#pranp" />
+                        </svg>
+                        <h6 style="color: rgb(146, 148, 148);"> questionario </h6>
+                      </a> -->
+                      <a href="pergunta2.html" class="nav-link   me-2">
+                        <svg class="bi d-block mx-auto mb-1"  width="24" height="24">
+                          <use xlink:href="#pran" />
+                        </svg>
+                        <h6> Perguntas </h6>
+                      </a>
+
+                      <!-- ------------------------------------------------- -->
+                      <a href="teste2.html" class="nav-link active me-2">
+                        <svg class="bi d-block mx-auto mb-1" style="color: pink;" width="30" height="30">
+                          <use xlink:href="#star" />
+                        </svg>
+                        <h6 style="color: pink;"> teste </h6>
+                      </a>
+            
+                      <!-- ------------------------------ -->
+                      <a href="informa.html" class="nav-link  me-20">
+                        <svg class="bi d-block mx-auto mb-1  "   width="24" height="24">
+                          <use xlink:href="#info" />
+                        </svg>
+                        <h6  >Sobre</h6>
+                      </a>
+
+
+       
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <!-- Informações -->
+<br><br>
+
+  <main class="container px-0">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary" >
+      <div class="col-lg- ">
+        <h1 class="display-6 fst-italic" style="text-align: center;">ROUBBIES</h1>
+        <p class="lead my-3">O aplicativo "Roubbies" surgiu a partir de um projeto de tcc, com a intenção de solucionar um problema frequente na vida das pessoas a nossa volta: a falta de hobbies e uma rotina saudável, que impactam negativamente a saúde mental. </p>
+
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis">importância do hobbie</strong>
+            <h3 class="mb-0"> Hobbie é muito necessário em nossas vidas pois, ajuda com a saude mental, eveitando problemos como ansiedade, alem de deixar as pessoas mais tranquilas e etc</h3>
+            <p class="card-text mb-auto"></p>
+
+
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis">importância de uma rotina</strong>
+            <h3 class="mb-0"> Ter uma rotina é impotante para que nós possamos ter dias mais produtivos, assim conseguindo cumprir com todos os compromissos e realizar as metas, alem de conseguir arrumar tempo para coisas de nossa vontade como um hobby </h3>
+            <p class="mb-auto"></p>
+
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-20 ">
+        <h3 class="pb-4 mb-5 fst-italic border-bottom">
+
+        </h3>
+
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Equilíbrio diário com o Roubbies</h2>
+          <p class="blog-post-meta">Por meio de um questionário simples, os usuários podem identificar seu perfil socioemocional. Com base nisso, o aplicativo gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada indivíduo. Isso inclui sugestões de atividades de lazer e momentos de relaxamento, visando melhorar a qualidade de vida e reduzir o estresse.</p>
+
+          <p>A proposta do "Roubbies" é simplificar o processo de desenvolvimento de uma rotina equilibrada e prazerosa. Ao oferecer recomendações personalizadas, o aplicativo ajuda os usuários a encontrar tempo para atividades que realmente lhes tragam satisfação.</p>
+
+          <p> Além disso, o acompanhamento contínuo da rotina permite ajustes conforme necessário, garantindo que ela permaneça adequada às necessidades e preferências de cada indivíduo. </p>
+          </blockquote>
+        </article> <br>
+        <hr>
+
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Bem-Estar Mental Acessível</h2>
+          <p>Ao abordar questões relacionadas à saúde mental de maneira prática e acessível, o "Roubbies" se destaca como uma ferramenta valiosa para melhorar o bem-estar dos usuários. </p>
+          <blockquote>
+            <p>Ao incentivar a inclusão de hobbies e momentos de relaxamento na rotina diária, o aplicativo promove um estilo de vida mais equilibrado e satisfatório, contribuindo para uma melhor qualidade de vida a longo prazo.</p>
+
+        </article>
+        <hr>
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Adicione texto</h2>
+          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+
+          <p>O aplicativo "Roubbies" oferece uma solução para a falta de hobbies e uma rotina saudável, visando melhorar a saúde mental dos usuários. Por meio de um questionário simples, o app gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada pessoa.</p>
+
+          <p> Ele inclui sugestões de atividades de lazer e relaxamento para promover o equilíbrio e reduzir o estresse. Com recomendações personalizadas e acompanhamento contínuo, o "Roubbies" torna mais fácil e acessível desenvolver uma rotina equilibrada e prazerosa, contribuindo para o bem-estar mental a longo prazo.</p>
+        </article>
+
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+        </nav>
+
+      </div>
+      <div class="p-4">
+        <h4 class="fst-italic">Sobre nós</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </main>
+
+  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p class="mb-0">
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+ 
