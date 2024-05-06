@@ -78,6 +78,52 @@
   outline: 0;
 }
 
+.nav-link {
+      margin-right: 120px;
+      /* Ajuste este valor conforme necessário para reduzir o espaço entre os ícones */
+      margin-left: 125px;
+    }
+
+     .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+
+
+    .blog-header-logo:hover {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+      ;
+    }
+
+    nav {
+      color: white;
+      margin-left: 0px;
+    }
+
+
+ 
+    .nav-link.active {
+      border-bottom: 3px solid #46d9b4;
+      /* Adicione um risco embaixo quando o link estiver ativo */
+    }
+
+    /* alinha as perguntas no centro */
+    .question-container{
+    text-align: auto; 
+    margin-left:450px;   
+    }
+   
 </style>
 
     
@@ -157,25 +203,46 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            
 
             <!-- ---------------------------------- -->
           <li class="nav-item">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#table" />
+              </svg>
             <a class="nav-link active" aria-current="page" href="inicio.html">Home</a>
           </li>
 
           <!-- ------------------------------------ -->
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Trocar de conta</a>
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#table" />
+              </svg>
+            <a class="nav-link" href="login.html">Agenda</a>
           </li>
 
           <!-- ------------------------------------------ -->
           <li class="nav-item">
-            <a class="nav-link" href="rotina.html">Minha rotina</a>
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#table" />
+              </svg>
+            <a class="nav-link" href="rotina.html">Questionário</a>
           </li>
 
           <!-- ------------------------------------------------- -->
           <li class="nav-item">
-            <a class="nav-link" href="rotina.html">Minha Agenda</a>
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#table" />
+              </svg>
+            <a class="nav-link" href="rotina.html">Teste</a>
+          </li>
+
+          <!-- ------------------------------ -->
+          <li class="nav-item">
+            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#table" />
+              </svg>
+            <a class="nav-link" href="rotina.html">Sobre</a>
           </li>
 
 
