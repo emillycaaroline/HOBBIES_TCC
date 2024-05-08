@@ -26,6 +26,28 @@
         <p>Esqueceu sua senha?</p>
         <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se</a><br></p>
     </form>
+    <?php
+session_start();
+
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Coleta os dados do formulário
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    // Verifica se o email e a senha correspondem aos dados do usuário
+    if ($email == "usuario@example.com" && $senha == "senha123") {
+        // Se as credenciais estiverem corretas, redireciona para a página de dashboard
+        $_SESSION['email'] = $email;
+        header("Location: dashboard.php");
+        exit(); // Certifica-se de que o script não continue executando após o redirecionamento
+    } else {
+        // Se as credenciais estiverem incorretas, exibe uma mensagem de erro
+        echo "Email ou senha incorretos. Por favor, tente novamente.";
+    }
+}
+?>
+
     
 </body>
 </html>
