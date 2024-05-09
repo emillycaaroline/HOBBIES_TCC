@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Login</title>
+    <link rel="stylesheet" href="cadlog.css">
+</head>
+<body>
+    <form class="t-login mx-auto" id="loginForm" action="/processarform" method="post" onsubmit="return processarform()">
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <div class="form-floating">
+        <label for="email">Usuário:</label>
+        <input class="form-control"  type="email" name="email" id="email">
+        </div>
+        <div class="form-floating">
+        <label for="senha">Senha:</label>
+        <input class="form-control" type="password" name="senha" id="senha">
+    </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Enviar</button>
+         <p>Esqueceu sua senha?</p>
+        <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se</a>
+    </form>
+
+<script>
+    function processarform() {
+        // Pega os valores dos campos
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+
+        // Verifica se os campos estão preenchidos
+        if (email === "" || senha === "") {
+            alert("Por favor, preencha todos os campos.");
+            return false; 
+        } else {
+            console.log("Usuário:", email);
+            console.log("Senha:", senha);
+        // Redireciona para a página inicial
+        window.location.href = "index.html";
+
+        // Retorna false para impedir o envio do formulário
+        return false;
+        }
+    }
+</script>
+    
+</body>
+</html>
+
