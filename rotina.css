@@ -51,3 +51,131 @@
 .navbar .form-control {
   padding: .75rem 1rem;
 }
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+
+    /* Margem em cima de toda pgn */
+      padding-top: 60px;
+  }
+
+  .question-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+
+  .options {
+      display: flex;
+      flex-direction: column;
+   
+  }
+
+  .option {
+      margin-bottom: 10px;
+  }
+
+  .btn-submit {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      color: #fff;
+      background-color:#22648B;
+      border: none;
+      cursor: pointer;
+  }
+
+  .btn-submit:hover {
+      background-color: #B8F0DF;
+  }
+  .form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
+/* ---------------------------------------------------------- */
+
+.bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+
+
+    .blog-header-logo:hover {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+      ;
+    }
+
+    nav {
+      color: white;
+      margin-left: 0px;
+    }
+
+
+    .container-custom {
+      max-width: 1200px;
+      /* Define a largura máxima do contêiner */
+      margin: 0 auto;
+      /* Centraliza o contêiner na página */
+      padding: 20px;
+      /* Adiciona um preenchimento interno ao contêiner */
+
+    }
+
+   
+
+    .nav-link {
+      margin-right: 150px;
+      /* Ajuste este valor conforme necessário para reduzir o espaço entre os ícones */
+      margin-left: 140px;
+    }
+
+   .btn-login{
+    background-color: #365B6D;
+   }
+
+    .nav-link.active {
+      border-bottom: 3px solid white;
+      /* Adicione um risco embaixo quando o link estiver ativo */
+    }
+
+    
+
+svg{
+  color: white;
+}
+
+h6{
+      color: white;
+    }
+
+</style>
