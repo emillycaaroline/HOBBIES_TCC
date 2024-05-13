@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Inicio</title>
+    <title>Perguntas</title>
    <link rel="stylesheet" href="rotina.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     
@@ -20,21 +20,32 @@
   body {
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
-
-    /* Margem em cima de toda pgn */
       padding-top: 60px;
   }
 
-  
+  .question-container {  /*ajusta questões */
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
 
+  .question {  /* Ajusta letra do questionario */
+      font-size: 18px;
+      margin-bottom: 20px;
 
-  .options {
+  }
+
+  .options {  /*Perguntas */
       display: flex;
       flex-direction: column;
    
   }
 
-  .option {
+  .option { /*Perguntas */
       margin-bottom: 10px;
   }
 
@@ -113,12 +124,10 @@
       margin-left: 140px;
     }
 
-   .btn-login{
-    background-color: #365B6D;
-   }
+   
 
     .nav-link.active {
-      border-bottom: 3px solid white;
+      border-bottom: 3px solid #9da09f;
       /* Adicione um risco embaixo quando o link estiver ativo */
     }
 
@@ -129,8 +138,8 @@ svg{
 }
 
 h6{
-      color: white;
-    }
+  color: white;
+}
 
 </style>
 
@@ -138,7 +147,6 @@ h6{
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
- 
   <body>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -148,7 +156,7 @@ h6{
       </symbol>
   
       <!-- pintada -->
-      <symbol style="color: white;" id="homep" viewBox="0 0 16 16">
+      <symbol id="homep" viewBox="0 0 16 16">
         <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
       </symbol>
   
@@ -205,22 +213,22 @@ h6{
 
     
 <header class="paleta-azul" id="menup" data-bs-theme="dark">
-  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color:#289DD2;">
+  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #22648B;">
     <div class="container-fluid">
-      <img src="img/logo2.png"  width=100 height=70 style="margin-left: 25px;">
+      <img src="img/logo2.png"  width=100 height=70>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" ></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse" >
         <ul class="navbar-nav me-auto mb-2 mb-md-0" >
-               <!-- text-black-50  = DEIXA O TEXTO CINZA -->
+
 
                       <!-- ---------------------------------- -->
-                      <a href="index.html" class="nav-link active me-2">
-                        <svg class="bi d-block mx-auto mb-1 active" style="color: pink;" width="24" height="24">
+                      <a href="index.html" class="nav-link active  me-2">
+                        <svg class="bi d-block mx-auto mb-1  active" style="color: pink;" width="24" height="24">
                           <use xlink:href="#homep" />
                         </svg>
-                        <h6> Inicio</h6>
+                        <h6  style="color: pink;" > Inicio</h6>
                       </a>
             
                       <!-- ------------------------------------ -->
@@ -232,12 +240,13 @@ h6{
                       </a>
             
                       <!-- ------------------------------------------ -->
-                     <a href="pergunta2.html" class="nav-link   me-2">
+                      <a href="pergunta2.html" class="nav-link me-2">
                         <svg class="bi d-block mx-auto mb-1"   width="24" height="24">
                           <use xlink:href="#pran" />
                         </svg>
-                        <h6> Perguntas </h6>
-                      </a>
+                        <h6 > Perguntas </h6>
+                      </a> 
+                      
 
                       <!-- ------------------------------------------------- -->
                       <a href="notas.html" class="nav-link me-2">
@@ -248,13 +257,13 @@ h6{
                       </a>
             
                       <!-- ------------------------------ -->
-                      <a href="informa2.html" class="nav-link me-20">
-                        <svg class="bi d-block mx-auto mb-1  " width="24" height="24">
+                      <a href="informa2.html" class="nav-link  me-20">
+                        <svg class="bi d-block mx-auto mb-1"   width="24" height="24">
                           <use xlink:href="#info" />
                         </svg>
                         <h6 >Sobre</h6>
                       </a>
-                     
+
                       <button style="background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'login.html';">Login</button>
 
       </div>
