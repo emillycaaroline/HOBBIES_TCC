@@ -140,7 +140,87 @@ svg{
 h6{
   color: white;
 }
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
 
+/* Estilo para o cabeçalho */
+header {
+    background-color: #22648B;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para os botões */
+.btn-primary {
+    background-color: #22648B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #B8F0DF;
+    color: #22648B;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    text-align: center;
+}
+
+/* Estilo para a seção de Inspiração do Dia */
+#inspiracao {
+    margin-top: 20px;
+}
+
+/* Estilo para a seção de Revisão da Rotina */
+#revisao-rotina {
+    margin-top: 20px;
+}
+
+/* Estilo para os registros da rotina */
+#registros {
+    margin-top: 10px;
+}
+#revisao-rotina {
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+   
+}
+
+#inspiracao {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+input{
+  background-color: #22648B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#registros{
+  margin-top: 60px;
+  
+}
+p{
+  margin-top: 6px;
+  color: #22648B;
+}
 </style>
 
     
@@ -272,109 +352,111 @@ h6{
 <br><br>
 
   <main class="container px-0">
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary" >
-      <div class="col-lg- ">
-        <h1 class="display-6 fst-italic" style="text-align: center;">INICIO</h1>
-        <p class="lead my-3">inicio inicioinicioinicioinicioinicioinicioinicioinicioinicioinicioinicioinicioinicio</p>
-        <div class="container mt-5">
-          <button style="background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'notas.html';">Bloco de notas</button>
-        </div>
-      </div>
-    </div>
+  <!-- HTML para exibir a Inspiração do Dia -->
+<div id="inspiracao">
+  <h3>Inspiração do Dia</h3>
+  <p id="frase-inspiradora">Carregando...</p>
+  <button onclick="novaFrase()">Nova Frase</button>
+</div>
 
-    <div class="row mb-2">
-      <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary-emphasis">INICIO</strong>
-            <h3 class="mb-0"> inicioinicioinicioinicioinicioinicioc</h3>
-            <p class="card-text mb-auto"></p>
+<script>
+  // Função para carregar uma nova frase inspiradora
+  function novaFrase() {
+      // Array de frases inspiradoras
+      var frases = [
+          "Acredite em você mesmo e tudo será possível.",
+          "O segredo do sucesso é começar antes de estar pronto.",
+          "A vida é curta demais para se preocupar com coisas pequenas.",
+          "A jornada de mil quilômetros começa com um único passo.",
+          "Você é mais forte do que pensa."
+      ];
+      // Seleciona uma frase aleatória do array
+      var novaFrase = frases[Math.floor(Math.random() * frases.length)];
+      // Atualiza o texto da frase inspiradora na página
+      document.getElementById("frase-inspiradora").innerText = novaFrase;
+  }
 
+  // Carregar uma frase inspiradora ao carregar a página
+  window.onload = novaFrase;
+</script>
 
-          </div>
-          <div class="col-auto d-none d-lg-block">
+<!-- HTML para exibir a Revisão da Rotina -->
+<!-- HTML para exibir a Revisão da Rotina -->
+<div id="revisao-rotina">
+  <h3>Revisão da Rotina</h3>
+  <label for="atividade">Atividade:</label>
+  <input type="text" id="atividade">
+  <label for="tempo">Tempo (minutos):</label>
+  <input type="number" id="tempo">
+  <label for="energia">Nível de Energia:</label>
+  <input type="range" id="energia" min="1" max="10">
+  <button style="background-color: #289DD2;" onclick="registrarAtividade()">Registrar Atividade</button>
+  <div id="registros"></div>
+</div>
 
-          </div>
-        </div>
-      </div>
+<script>
+  // Função para excluir um registro
+  function excluirRegistro(index) {
+    // Obter os registros salvos do armazenamento local
+    var registrosSalvos = localStorage.getItem("registrosRotina") ? JSON.parse(localStorage.getItem("registrosRotina")) : [];
+    // Remover o registro correspondente ao índice fornecido
+    registrosSalvos.splice(index, 1);
+    // Salvar a lista atualizada de registros no armazenamento local
+    localStorage.setItem("registrosRotina", JSON.stringify(registrosSalvos));
+    // Atualizar a exibição na página
+    exibirRegistros(registrosSalvos);
+  }
 
+  // Função para exibir os registros na página
+  function exibirRegistros(registros) {
+    var registrosDiv = document.getElementById("registros");
+    registrosDiv.innerHTML = ""; // Limpar a lista antes de exibir os registros
+    // Iterar sobre os registros e exibir cada um na página
+    registros.forEach(function(registro, index) {
+      registrosDiv.innerHTML += `<p>${registro} <button onclick="excluirRegistro(${index})">Excluir</button></p>`;
+    });
+  }
 
-      <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-success-emphasis">INICIO</strong>
-            <h3 class="mb-0"> inicioinicioinicioinicioinicioinicioinicioinicioinicio</h3>
-            <p class="mb-auto"></p>
+  // Carregar registros salvos do armazenamento local ao carregar a página
+  window.onload = function() {
+    // Verificar se há registros salvos no armazenamento local
+    if (localStorage.getItem("registrosRotina")) {
+      // Obter registros salvos do armazenamento local
+      var registrosSalvos = JSON.parse(localStorage.getItem("registrosRotina"));
+      // Exibir os registros na página
+      exibirRegistros(registrosSalvos);
+    }
+  };
 
-          </div>
-          <div class="col-auto d-none d-lg-block">
+  // Função para registrar uma nova atividade na rotina
+  function registrarAtividade() {
+    // Obter os valores dos campos de entrada
+    var atividade = document.getElementById("atividade").value;
+    var tempo = document.getElementById("tempo").value;
+    var energia = document.getElementById("energia").value;
+    // Criar uma string com os dados da atividade
+    var registro = `Atividade: ${atividade}, Tempo: ${tempo} minutos, Energia: ${energia}/10`;
+    // Adicionar o registro à lista na página
+    var registrosDiv = document.getElementById("registros");
+    registrosDiv.innerHTML += `<p>${registro} <button  style="background-color: red;"onclick="excluirRegistro(${registrosDiv.children.length})">Excluir</button></p>`;
+    // Salvar o novo registro no armazenamento local
+    salvarRegistro(registro);
+    // Limpar os campos de entrada após o registro
+    document.getElementById("atividade").value = "";
+    document.getElementById("tempo").value = "";
+    document.getElementById("energia").value = "";
+  }
 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row g-5">
-      <div class="col-md-20 ">
-        <h3 class="pb-4 mb-5 fst-italic border-bottom">
-
-        </h3>
-
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Equilíbrio diário com o Roubbies</h2>
-          <p class="blog-post-meta">Por meio de um questionário simples, os usuários podem identificar seu perfil socioemocional. Com base nisso, o aplicativo gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada indivíduo. Isso inclui sugestões de atividades de lazer e momentos de relaxamento, visando melhorar a qualidade de vida e reduzir o estresse.</p>
-
-          <p>A proposta do "Roubbies" é simplificar o processo de desenvolvimento de uma rotina equilibrada e prazerosa. Ao oferecer recomendações personalizadas, o aplicativo ajuda os usuários a encontrar tempo para atividades que realmente lhes tragam satisfação.</p>
-
-          <p> Além disso, o acompanhamento contínuo da rotina permite ajustes conforme necessário, garantindo que ela permaneça adequada às necessidades e preferências de cada indivíduo. </p>
-          </blockquote>
-        </article> <br>
-        <hr>
-
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Bem-Estar Mental Acessível</h2>
-          <p>Ao abordar questões relacionadas à saúde mental de maneira prática e acessível, o "Roubbies" se destaca como uma ferramenta valiosa para melhorar o bem-estar dos usuários. </p>
-          <blockquote>
-            <p>Ao incentivar a inclusão de hobbies e momentos de relaxamento na rotina diária, o aplicativo promove um estilo de vida mais equilibrado e satisfatório, contribuindo para uma melhor qualidade de vida a longo prazo.</p>
-
-        </article>
-        <hr>
-        <article class="blog-post">
-          <h2 class="display-5 link-body-emphasis mb-1">Adicione texto</h2>
-          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
-
-          <p>O aplicativo "Roubbies" oferece uma solução para a falta de hobbies e uma rotina saudável, visando melhorar a saúde mental dos usuários. Por meio de um questionário simples, o app gera uma rotina personalizada, adaptada aos compromissos diários e semanais de cada pessoa.</p>
-
-          <p> Ele inclui sugestões de atividades de lazer e relaxamento para promover o equilíbrio e reduzir o estresse. Com recomendações personalizadas e acompanhamento contínuo, o "Roubbies" torna mais fácil e acessível desenvolver uma rotina equilibrada e prazerosa, contribuindo para o bem-estar mental a longo prazo.</p>
-        </article>
-
-        <nav class="blog-pagination" aria-label="Pagination">
-          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
-          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
-        </nav>
-
-      </div>
-      <div class="p-4">
-        <h4 class="fst-italic">Sobre nós</h4>
-        <ol class="list-unstyled">
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ol>
-      </div>
-    </div>
-    </div>
-    </div>
-
-  </main>
-
-  <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    <p class="mb-0">
-      <a href="#">Back to top</a>
-    </p>
-  </footer>
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  // Função para salvar um registro no armazenamento local
+  function salvarRegistro(registro) {
+    // Verificar se há registros salvos no armazenamento local
+    var registrosSalvos = localStorage.getItem("registrosRotina") ? JSON.parse(localStorage.getItem("registrosRotina")) : [];
+    // Adicionar o novo registro à lista de registros salvos
+    registrosSalvos.push(registro);
+    // Salvar a lista atualizada de registros no armazenamento local
+    localStorage.setItem("registrosRotina", JSON.stringify(registrosSalvos));
+  }
+</script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
