@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larissa</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+header {
+    background-color: #22648B;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #22648B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #B8F0DF;
+    color: #22648B;
+}
+
+.container {
+    text-align: center;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #22648B;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-footer {
+    border-radius: 0 0 10px 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-title {
+    font-size: 20px;
+}
+
+.btn-close {
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+#anotacoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-primary.m-2 {
+    margin: 5px;
+}
+
+</style>
+<body>
+<header>
+    <div class="container mt-5">
+        <button style="background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'index.html';">Bloco de notas</button>
+      </div>
+</header>
+<div class="container mt-5">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Registro</button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova Anotação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-anotacoes">
+          <div class="mb-3">
+            <label for="titulo" class="col-form-label">Título:</label>
+            <input type="text" class="form-control" id="titulo" required>
+          </div>
+          <div class="mb-3">
+            <label for="data" class="col-form-label">Data:</label>
+            <input type="date" class="form-control" id="data" required>
+          </div>
+          <div class="mb-3">
+            <label for="anotacao" class="col-form-label">Anotação:</label>
+            <textarea class="form-control" id="anotacao" required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" onclick="salvarAnotacao()">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Função para carregar as anotações salvas no armazenamento local
+window.onload = function() {
+    var anotacoes = JSON.parse(localStorage.getItem("anotacoes"));
+    if (anotacoes) {
+        anotacoes.forEach(function(anotacao) {
+            adicionarAnotacao(anotacao.titulo, anotacao.data, anotacao.texto);
+        });
+    }
+};
+
+// Função para salvar uma nova anotação
+function salvarAnotacao() {
+    var titulo = document.getElementById("titulo").value;
+    var data = document.getElementById("data").value;
+    var anotacao = document.getElementById("anotacao").value;
+    
+    // Adiciona a nova anotação ao armazenamento local
+    var anotacoes = JSON.parse(localStorage.getItem("anotacoes")) || [];
+    anotacoes.push({ titulo: titulo, data: data, texto: anotacao });
+    localStorage.setItem("anotacoes", JSON.stringify(anotacoes));
+    
+    // Adiciona a nova anotação à página
+    adicionarAnotacao(titulo, data, anotacao);
+
+    // Limpa o formulário
+    document.getElementById("form-anotacoes").reset();
+
+    // Fecha o modal
+    var modal = bootstrap.Modal.getInstance(document.getElementById("exampleModal"));
+    modal.hide();
+}
+
+// Função para adicionar uma anotação à página
+function adicionarAnotacao(titulo, data, anotacao) {
+    // Criação do botão com o título como título
+    var novoBotao = document.createElement("button");
+    novoBotao.type = "button";
+    novoBotao.className = "btn btn-primary m-2";
+    novoBotao.textContent = titulo;
+    novoBotao.setAttribute("data-bs-toggle", "modal");
+    novoBotao.setAttribute("data-bs-target", "#anotacaoModal");
+
+    // Adiciona um evento para exibir a anotação no modal ao clicar no botão
+    novoBotao.addEventListener("click", function() {
+        document.getElementById("anotacaoTitulo").textContent = titulo;
+        document.getElementById("anotacaoData").textContent = data;
+        document.getElementById("anotacaoConteudo").textContent = anotacao;
+    });
+
+    // Criação do botão de exclusão
+    var botaoExcluir = document.createElement("button");
+    botaoExcluir.type = "button";
+    botaoExcluir.className = "btn btn-danger btn-sm m-2";
+    botaoExcluir.textContent = "Excluir";
+    botaoExcluir.addEventListener("click", function() {
+        novoBotao.remove();
+        // Remove a anotação do armazenamento local
+        var anotacoes = JSON.parse(localStorage.getItem("anotacoes"));
+        anotacoes = anotacoes.filter(function(item) {
+            return item.titulo !== titulo || item.data !== data || item.texto !== anotacao;
+        });
+        localStorage.setItem("anotacoes", JSON.stringify(anotacoes));
+    });
+
+    // Adiciona o novo botão à página
+    document.getElementById("anotacoes").appendChild(novoBotao);
+    novoBotao.appendChild(botaoExcluir);
+}
+
+// Função para salvar os dados do localStorage em um arquivo local
+function salvarBackup() {
+    // Obter os dados do localStorage
+    var dados = localStorage.getItem("anotacoes");
+
+    // Verificar se há dados a serem salvos
+    if (dados) {
+        // Converter os dados para o formato desejado (por exemplo, JSON)
+        var dadosFormatados = JSON.stringify(dados);
+
+        // Criar um novo objeto Blob com os dados formatados
+        var blob = new Blob([dadosFormatados], { type: "application/json" });
+
+        // Criar um link de download para o Blob
+        var url = URL.createObjectURL(blob);
+
+        // Criar um elemento <a> para iniciar o download
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = "backup_anotacoes.json";
+
+        // Simular um clique no link para iniciar o download
+        link.click();
+
+        // Liberar a URL do objeto Blob
+        URL.revokeObjectURL(url);
+    } else {
+        console.log("Nenhuma anotação para fazer backup.");
+    }
+}
+
+// Função para confirmar se deseja voltar com ou sem backup
+function confirmarVoltar() {
+    var confirmacao = confirm("Deseja salvar o backup antes de sair?");
+    if (confirmacao) {
+        salvarBackup();
+        // Após salvar o backup, redirecionar para a página "pi.html"
+        window.location.href = "pi.html";
+    } else {
+        // Se não deseja salvar o backup, apenas redirecionar para a página "pi.html"
+        window.location.href = "pi.html";
+    }
+}
+
+</script>
+
+
+<!-- Modal de Visualização de Anotação -->
+<div class="modal fade" id="anotacaoModal" tabindex="-1" aria-labelledby="anotacaoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="anotacaoTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Data:</strong> <span id="anotacaoData"></span></p>
+        <p><strong>Conteúdo:</strong></p>
+        <p id="anotacaoConteudo"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="anotacoes" class="container mt-3">
+  <!-- Aqui serão inseridos os botões de anotação -->
+</div>
+
+</body>
+</html>
