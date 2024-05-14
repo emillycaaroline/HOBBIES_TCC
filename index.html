@@ -140,7 +140,87 @@ svg{
 h6{
   color: white;
 }
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
 
+/* Estilo para o cabeçalho */
+header {
+    background-color: #22648B;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para os botões */
+.btn-primary {
+    background-color: #22648B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #B8F0DF;
+    color: #22648B;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    text-align: center;
+}
+
+/* Estilo para a seção de Inspiração do Dia */
+#inspiracao {
+    margin-top: 20px;
+}
+
+/* Estilo para a seção de Revisão da Rotina */
+#revisao-rotina {
+    margin-top: 20px;
+}
+
+/* Estilo para os registros da rotina */
+#registros {
+    margin-top: 10px;
+}
+#revisao-rotina {
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+   
+}
+
+#inspiracao {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+input{
+  background-color: #22648B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#registros{
+  margin-top: 60px;
+  
+}
+p{
+  margin-top: 6px;
+  color: #22648B;
+}
 </style>
 
     
@@ -208,10 +288,6 @@ h6{
       </symbol>
   
     </svg>
-
-
-
-    
 <header class="paleta-azul" id="menup" data-bs-theme="dark">
   <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #22648B;">
     <div class="container-fluid">
@@ -249,11 +325,11 @@ h6{
                       
 
                       <!-- ------------------------------------------------- -->
-                      <a href="teste2.html" class="nav-link me-2">
+                      <a href="notas.html" class="nav-link me-2">
                         <svg class="bi d-block mx-auto mb-1" width="30" height="30">
                           <use xlink:href="#star" />
                         </svg>
-                        <h6> teste </h6>
+                        <h6>Bloco de notas</h6>
                       </a>
             
                       <!-- ------------------------------ -->
@@ -268,13 +344,122 @@ h6{
 
       </div>
     </div>
+    </nav>
   </nav>
 </header>  
 <body>
+  <!-- Informações -->
+<br><br>
 
-<!-- Perguntas -->
+  <main class="container px-0">
+  <!-- HTML para exibir a Inspiração do Dia -->
+<div id="inspiracao">
+  <h3>Inspiração do Dia</h3>
+  <p id="frase-inspiradora">Carregando...</p>
+  <button onclick="novaFrase()">Nova Frase</button>
+</div>
 
+<script>
+  // Função para carregar uma nova frase inspiradora
+  function novaFrase() {
+      // Array de frases inspiradoras
+      var frases = [
+          "Acredite em você mesmo e tudo será possível.",
+          "O segredo do sucesso é começar antes de estar pronto.",
+          "A vida é curta demais para se preocupar com coisas pequenas.",
+          "A jornada de mil quilômetros começa com um único passo.",
+          "Você é mais forte do que pensa."
+      ];
+      // Seleciona uma frase aleatória do array
+      var novaFrase = frases[Math.floor(Math.random() * frases.length)];
+      // Atualiza o texto da frase inspiradora na página
+      document.getElementById("frase-inspiradora").innerText = novaFrase;
+  }
 
+  // Carregar uma frase inspiradora ao carregar a página
+  window.onload = novaFrase;
+</script>
+
+<!-- HTML para exibir a Revisão da Rotina -->
+<!-- HTML para exibir a Revisão da Rotina -->
+<div id="revisao-rotina">
+  <h3>Revisão da Rotina</h3>
+  <label for="atividade">Atividade:</label>
+  <input type="text" id="atividade">
+  <label for="tempo">Tempo (minutos):</label>
+  <input type="number" id="tempo">
+  <label for="energia">Nível de Energia:</label>
+  <input type="range" id="energia" min="1" max="10">
+  <button style="background-color: #289DD2;" onclick="registrarAtividade()">Registrar Atividade</button>
+  <div id="registros"></div>
+</div>
+
+<script>
+  // Função para excluir um registro
+  function excluirRegistro(index) {
+    // Obter os registros salvos do armazenamento local
+    var registrosSalvos = localStorage.getItem("registrosRotina") ? JSON.parse(localStorage.getItem("registrosRotina")) : [];
+    // Remover o registro correspondente ao índice fornecido
+    registrosSalvos.splice(index, 1);
+    // Salvar a lista atualizada de registros no armazenamento local
+    localStorage.setItem("registrosRotina", JSON.stringify(registrosSalvos));
+    // Atualizar a exibição na página
+    exibirRegistros(registrosSalvos);
+  }
+
+  // Função para exibir os registros na página
+  function exibirRegistros(registros) {
+    var registrosDiv = document.getElementById("registros");
+    registrosDiv.innerHTML = ""; // Limpar a lista antes de exibir os registros
+    // Iterar sobre os registros e exibir cada um na página
+    registros.forEach(function(registro, index) {
+      registrosDiv.innerHTML += `<p>${registro} <button onclick="excluirRegistro(${index})">Excluir</button></p>`;
+    });
+  }
+
+  // Carregar registros salvos do armazenamento local ao carregar a página
+  window.onload = function() {
+    // Verificar se há registros salvos no armazenamento local
+    if (localStorage.getItem("registrosRotina")) {
+      // Obter registros salvos do armazenamento local
+      var registrosSalvos = JSON.parse(localStorage.getItem("registrosRotina"));
+      // Exibir os registros na página
+      exibirRegistros(registrosSalvos);
+    }
+  };
+
+  // Função para registrar uma nova atividade na rotina
+  function registrarAtividade() {
+    // Obter os valores dos campos de entrada
+    var atividade = document.getElementById("atividade").value;
+    var tempo = document.getElementById("tempo").value;
+    var energia = document.getElementById("energia").value;
+    // Criar uma string com os dados da atividade
+    var registro = `Atividade: ${atividade}, Tempo: ${tempo} minutos, Energia: ${energia}/10`;
+    // Adicionar o registro à lista na página
+    var registrosDiv = document.getElementById("registros");
+    registrosDiv.innerHTML += `<p>${registro} <button  style="background-color: red;"onclick="excluirRegistro(${registrosDiv.children.length})">Excluir</button></p>`;
+    // Salvar o novo registro no armazenamento local
+    salvarRegistro(registro);
+    // Limpar os campos de entrada após o registro
+    document.getElementById("atividade").value = "";
+    document.getElementById("tempo").value = "";
+    document.getElementById("energia").value = "";
+  }
+
+  // Função para salvar um registro no armazenamento local
+  function salvarRegistro(registro) {
+    // Verificar se há registros salvos no armazenamento local
+    var registrosSalvos = localStorage.getItem("registrosRotina") ? JSON.parse(localStorage.getItem("registrosRotina")) : [];
+    // Adicionar o novo registro à lista de registros salvos
+    registrosSalvos.push(registro);
+    // Salvar a lista atualizada de registros no armazenamento local
+    localStorage.setItem("registrosRotina", JSON.stringify(registrosSalvos));
+  }
+</script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
