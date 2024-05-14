@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Horário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Registro de Horário</h1>
+        <form id="registroForm">
+            <label for="horarioSono">Horário de Sono:</label>
+            <input type="time" id="horarioSono" name="horarioSono" required>
+            
+            <label for="horarioTrabalho">Horário de Trabalho/Estudo:</label>
+            <input type="time" id="horarioTrabalho" name="horarioTrabalho" required>
+            
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Recuperar valores dos campos
+    var horarioSono = document.getElementById('horarioSono').value;
+    var horarioTrabalho = document.getElementById('horarioTrabalho').value;
+
+    // Aqui você pode enviar os dados para onde quiser, seja um servidor backend ou armazenar localmente
+    // Por exemplo, você pode usar AJAX para enviar os dados para um servidor backend em PHP, Node.js, etc.
+
+    // Por agora, vamos apenas exibir os valores na console
+    console.log('Horário de Sono:', horarioSono);
+    console.log('Horário de Trabalho/Estudo:', horarioTrabalho);
+
+    // Limpar os campos depois de registrar
+    document.getElementById('registroForm').reset();
+});
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
