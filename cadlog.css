@@ -1,13 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  background-color:#289DD2;
+  background-color:#dfdfdf;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
-/* .t-login { */
+ .t-login { 
   width: 150%;
   max-width: 300px;
   padding: 30px;

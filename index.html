@@ -19,14 +19,15 @@
 <style>
   body {
       font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
       padding-top: 60px;
+      margin-left: 5px;
+      margin-right: 5px ;
   }
 
   .question-container {  /*ajusta questões */
       max-width: 600px;
       margin: auto;
-      background-color: #fff;
+      background-color: #d3d3d3;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -127,7 +128,7 @@
    
 
     .nav-link.active {
-      border-bottom: 3px solid #9da09f;
+      border-bottom: 3px solid #143f53;
       /* Adicione um risco embaixo quando o link estiver ativo */
     }
 
@@ -207,10 +208,11 @@ header {
 }
 
 input{
-  background-color: #22648B;
+  background-color: #dfdfdf;
   color: white;
-  border: none;
+ 
   border-radius: 6px;
+  border-color: #143f53;
 }
 
 #registros{
@@ -221,14 +223,13 @@ p{
   margin-top: 6px;
   color: #22648B;
 }
+
 </style>
 
     
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body>
-
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <!-- simbolo casa -->
       <symbol id="home" viewBox="0 0 16 16">
@@ -288,23 +289,23 @@ p{
       </symbol>
   
     </svg>
-<header class="paleta-azul" id="menup" data-bs-theme="dark">
-  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #22648B;">
+<header  class="container mt-3" id="menup" data-bs-theme="dark">
+  <nav id="header" class="navbar navbar-expand-md fixed-top " style="background-color: #289DD2;">
     <div class="container-fluid">
       <img src="img/logo2.png"  width=100 height=70>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" ></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse" >
-        <ul class="navbar-nav me-auto mb-2 mb-md-0" >
+      <div  class="collapse navbar-collapse" id="navbarCollapse" >
+        <ul class="navbar-nav  mb-0 mb-md-0 mt-0" >
 
 
                       <!-- ---------------------------------- -->
                       <a href="index.html" class="nav-link active  me-2">
-                        <svg class="bi d-block mx-auto mb-1  active" style="color: pink;" width="24" height="24">
+                        <svg class="bi d-block mx-auto mb-1  active" style="color: #173d61" width="24" height="24">
                           <use xlink:href="#homep" />
                         </svg>
-                        <h6  style="color: pink;" > Inicio</h6>
+                        <h6  style="color: #163858;" > Inicio</h6>
                       </a>
             
                       <!-- ------------------------------------ -->
@@ -326,28 +327,28 @@ p{
 
                       <!-- ------------------------------------------------- -->
                       <a href="notas.html" class="nav-link me-2">
-                        <svg class="bi d-block mx-auto mb-1" width="30" height="30">
+                        <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                           <use xlink:href="#star" />
                         </svg>
-                        <h6>Bloco de notas</h6>
+                        <h6>notas</h6>
                       </a>
             
                       <!-- ------------------------------ -->
-                      <a href="informa2.html" class="nav-link  me-20">
+                      <a href="informa2.html" class="nav-link  me-5">
                         <svg class="bi d-block mx-auto mb-1"   width="24" height="24">
                           <use xlink:href="#info" />
                         </svg>
                         <h6 >Sobre</h6>
                       </a>
-
-                      <button style="background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'login.html';">Login</button>
-
+<div style="padding-left: 35px;">
+                      <button style=" margin-top: 9px; background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'login.html';">Login</button>
+                    </div>
       </div>
     </div>
     </nav>
   </nav>
 </header>  
-<body>
+<body  style=" margin: 20px;  background-color: #dfdfdf;">
   <!-- Informações -->
 <br><br>
 
@@ -356,7 +357,7 @@ p{
 <div id="inspiracao">
   <h3>Inspiração do Dia</h3>
   <p id="frase-inspiradora">Carregando...</p>
-  <button onclick="novaFrase()">Nova Frase</button>
+  <button style=" border: none; border-radius: 5px; background-color: #22648B; color: white;"  onclick="novaFrase()">Nova Frase</button>
 </div>
 
 <script>
@@ -382,7 +383,7 @@ p{
 
 <!-- HTML para exibir a Revisão da Rotina -->
 <!-- HTML para exibir a Revisão da Rotina -->
-<div id="revisao-rotina">
+<div id="revisao-rotina" style="background-color: #fff;">
   <h3>Revisão da Rotina</h3>
   <label for="atividade">Atividade:</label>
   <input type="text" id="atividade">
@@ -390,7 +391,7 @@ p{
   <input type="number" id="tempo">
   <label for="energia">Nível de Energia:</label>
   <input type="range" id="energia" min="1" max="10">
-  <button style="background-color: #289DD2;" onclick="registrarAtividade()">Registrar Atividade</button>
+  <button style= "border: none; border-radius: 5px; background-color: #22648B; color: white;  " onclick="registrarAtividade()">Registrar Atividade</button>
   <div id="registros"></div>
 </div>
 
