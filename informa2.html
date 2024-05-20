@@ -208,64 +208,40 @@ h6{
     </svg>
 
 
-
-    
-<header class="paleta-azul" id="menup" data-bs-theme="dark">
-  <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #289DD2;">
-    <div class="container-fluid">
-      <img src="img/logo_branco.png"  width=100 height=70>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" ></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse" >
-        <ul class="navbar-nav me-auto mb-2 mb-md-0" >
-  <!-- ---------------------------------- -->
-  <a href="index.html" class="nav-link  me-2">
-    <svg class="bi d-block mx-auto mb-1  active" width="24" height="24">
-      <use xlink:href="#home" />
-    </svg>
-    <h6 > Inicio</h6>
-  </a>
-
-  <!-- ------------------------------------ -->
-  <a href="agenda2.html" class="nav-link me-2">
-    <svg class="bi d-block mx-auto mb-1 active " width="24" height="24">
-      <use xlink:href="#table" />
-    </svg>
-    <h6 > Agenda</h6>
-  </a>
-
-  <!-- ------------------------------------------ -->
-  <a href="pergunta2.html" class="nav-link me-2">
-    <svg class="bi d-block mx-auto mb-1"   width="24" height="24">
-      <use xlink:href="#pran" />
-    </svg>
-    <h6 > Perguntas </h6>
-  </a> 
-  
-
-  <!-- ------------------------------------------------- -->
-  <a href="notas.html" class="nav-link me-2">
-    <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-      <use xlink:href="#star" />
-    </svg>
-    <h6>Notas</h6>
-  </a>
-
-  <!-- ------------------------------ -->
-  <a href="informa2.html" class="nav-link  active me-5">
-    <svg class="bi d-block mx-auto mb-1"  style="color: #163858;" width="24" height="24">
-      <use xlink:href="#infop" />
-    </svg>
-    <h6 style="color: #163858;">Sobre</h6>
-  </a>
-  <div style="padding-left: 35px;">
-    <button style=" margin-top: 9px; background-color: #22648B; color: white; border-radius: 5px; border:#289DD2; width: 80px; height: 50px;margin-right: 20px;" id="btn-login"  type="button" onclick="window.location.href = 'login.html';">Login</button>
-  </div>
+    <nav style="background-color: #22648B;" class="navbar navbar-expand-md sticky-top border-bottom" data-bs-theme="">
+      <div class="container">
+        <a class="navbar-brand d-md-none" href="#">
+          <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+          Aperture
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 justify-content-between">
+              <li class="nav-item"><a class="nav-link" href="#">
+                <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
+              </a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">
+                <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+              </a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+    
 <body>
 
       <!-- Informações -->
