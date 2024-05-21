@@ -239,10 +239,14 @@ p{
     color: white; /* Define a cor do texto como branco */
   }
 
-      /* margem para todos os elementos */
-      * {
-      
-      }
+  .container {
+  margin: 20px 20px; /* Margem automática horizontalmente e 20px verticalmente */
+  max-width: 1320px; /* Largura máxima para centralizar o conteúdo */
+  padding: 0 15px; /* Padding interno */
+}
+main {
+  padding-top: 70px; /* Espaçamento entre o cabeçalho e o corpo da página */
+}
     
     </style>
     
@@ -359,11 +363,10 @@ p{
           </a></li>
         </ul>
       </div>
-
-    ROUBBIES
     </div>
   </div>
 </nav>
+<main>
 <div class="container mt-5">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Registro</button>
 </div>
@@ -398,6 +401,7 @@ p{
     </div>
   </div>
 </div>
+</main>
 <script>
 // Função para carregar as anotações salvas no armazenamento local
 window.onload = function() {
