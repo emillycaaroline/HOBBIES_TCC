@@ -144,80 +144,105 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+     
       #inspiracao {
-    margin-top: 20px;
-}
-/* Estilo para a seção de Revisão da Rotina */
-#revisao-rotina {
-    margin-top: 20px;
-}
-/* Estilo para os registros da rotina */
-#registros {
-    margin-top: 10px;
-}
-#revisao-rotina {
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-   
-}
-#inspiracao {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-input{
-  background-color: #dfdfdf;
-  border-radius: 6px;
-  border-color: #22648B;
-}
-#registros{
-  margin-top: 60px;
-  
-}
-p{
-  margin-top: 6px;
-  border-color: #22648B;
-}
-  /* fixar o menu no topo */
-  .navbar {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background-color: #22648B;
+        margin-top: 20px;
+      }
 
-        }
-        .navbar-brand{
-          color: white;
-        }
-        .container {
-  margin: 20px 20px; /* Margem automática horizontalmente e 20px verticalmente */
-  max-width: 1320px; /* Largura máxima para centralizar o conteúdo */
-  padding: 0 15px; /* Padding interno */
-}
+      /* Estilo para a seção de Revisão da Rotina */
+      #revisao-rotina {
+        margin-top: 20px;
+      }
+
+      /* Estilo para os registros da rotina */
+      #registros {
+        margin-top: 10px;
+      }
+
+      #revisao-rotina {
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      #inspiracao {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .registro-fixo {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .registro-fixo,
+      .start {
+        text-align: center;
+      }
+
+      input {
+        background-color: #dfdfdf;
+        border-radius: 6px;
+        border-color: #22648B;
+      }
+
+      #registros {
+        margin-top: 60px;
+      }
+
+      p {
+        margin-top: 6px;
+        border-color: #22648B;
+      }
+
+      /* fixar o menu no topo */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #22648B;
+      }
+
+      .navbar-brand {
+        color: white;
+      }
+
+      .container {
+        margin: 20px 20px;
+        max-width: 1320px;
+        padding: 0 15px;
+      }
 
       .navbar .navbar-nav .nav-link {
-    color: white; /* Define a cor do texto como branco */
-  }
-  body{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 1320px; /* Largura máxima para centralizar o conteúdo */
-    
-}
-*{
-  max-width: 1320px; /* Largura máxima para centralizar o conteúdo */
-}
-main {
-  padding-top: 70px; /* Espaçamento entre o cabeçalho e o corpo da página */
-}
+        color: white;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 1320px;
+      }
+
+      * {
+        max-width: 1320px;
+      }
+
+      main {
+        padding-top: 70px;
+      }
     </style>
+
     
     
     <!-- Custom styles for this template -->
@@ -339,6 +364,39 @@ main {
               <!-- Eventos serão adicionados aqui -->
           </div>
       </div>
+      <div class="registro-fixo">
+        <h1>Insira seus horários fixos</h1>
+        <form method="post" id="registro-fixo">
+            <div class="form-group">
+                <label for="work-start">Início do trabalho:</label>
+                <input type="time" id="work-start" required> 
+            </div>
+            <div class="form-group">
+                <label for="work-end">Fim do trabalho:</label>
+                <input type="time" id="work-end" required>
+            </div>
+            <div class="form-group">
+                <label for="study-start">Início do estudo:</label>
+                <input type="time" id="study-start" required>
+            </div>
+            <div class="form-group">
+                <label for="study-end">Fim do estudo:</label>
+                <input type="time" id="study-end" required>
+            </div>
+            <div class="form-group">
+                <label for="sleep-start">Início do sono:</label>
+                <input type="time" id="sleep-start" required>
+            </div>
+            <div class="form-group">
+                <label for="sleep-end">Fim do sono:</label>
+                <input type="time" id="sleep-end" required>
+            </div>
+            <button type="submit">Salvar Horários</button>
+        </form>
+        <div id="status"></div>
+    </div>
+    <script src="script.js"></script>
+
   </main>
   <script>
       //ARMAZENA AS FRASES QUE SERÁ EXIBIDAS
