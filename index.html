@@ -5,159 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROUBBIES</title>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          color: #333;
-          background-color: #B8F0DF;
-      } 
-      
-      .container1, .container2, .container3, .container4, .container5, .container6 {
-          margin: 5px 5px;
-          padding: 20px;
-      }
-  
-      .container1 { background-color: #B8F0DF; color: #333; } /* Preto para letras */
-      .container2 { background-color: #22648B; color: white; }
-      .container3 { background-color: #5E98F3; color: white; }
-      .container4 { background-color: #B8F0DF; color: #333; } /* Preto para letras */
-      .container5 { background-color: #5E98F3; color: white; }
-      .container6 { background-color: #5E98F3; color: white; }
-  
-      h1, h2 {
-          text-align: center;
-      }
-  
-      /* Botão inicial */
-      .cta {
-          background-color: #5E98F3;
-          color: white;
-          padding: 10px 20px;
-          text-decoration: none;
-          border-radius: 5px;
-          display: inline-block;
-          text-align: center;
-          margin-top: 20px;
-      }
-  
-      .cta:hover {
-          background-color: #22648B;
-      }
-  
-      footer {
-          background-color: #22648B;
-          color: white;
-          text-align: center;
-          padding: 10px;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-      }
-  
-      /* Menu */
-      .navbar {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background-color: #22648B;
-          z-index: 1000;
-      }
-      .offcanvas{
-      background-color: #22648B;
-      }
-      .navbar-brand, .navbar-nav .nav-link {
-          color: white;
-      }
-  
-      .navbar-brand {
-          margin-right: auto;
-      }
-  
-      .container {
-          margin: 20px 20px;
-          max-width: 1320px;
-          padding: 0 15px;
-      }
-  
-      main {
-          padding-top: 70px;
-      }
-  </style>
-  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #B8F0DF;
+        }
+
+        .container1, .container2, .container3, .container4, .container5, .container6 {
+            margin: 5px;
+            padding: 20px;
+        }
+
+        .container1, .container4 {
+            background-color: #B8F0DF;
+            color: #333;
+        }
+
+        .container2, .container6 {
+            background-color: #22648B;
+            color: white;
+        }
+
+        .container3, .container5 {
+            background-color: #5E98F3;
+            color: white;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Botão inicial */
+        .cta {
+            background-color: #5E98F3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta:hover {
+            background-color: #22648B;
+        }
+
+        footer {
+            background-color: #22648B;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Menu */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #22648B;
+            z-index: 1000;
+        }
+
+        .offcanvas {
+            background-color: #22648B;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-brand {
+            margin-right: auto;
+        }
+
+        .container {
+            margin: 20px 20px;
+            max-width: 1320px;
+            padding: 0 15px;
+        }
+
+        main {
+            padding-top: 5px; /* Ajuste conforme a altura do menu fixo */
+        }
+    </style>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-md border-bottom">
-    <div class="container">
-      <a class="navbar-brand d-md-none" href="#">ROUBBIES</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div style="background-color: #22648B;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">ROUBBIES</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <nav class="navbar navbar-expand-md border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-md-none" href="#">ROUBBIES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div style="background-color: #22648B;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">ROUBBIES</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 justify-content-between">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pergunta2.html">Teste</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav flex-grow-1 justify-content-between">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
-            <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
-            <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="pergunta2.html">Teste</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 </header>
 
 <main>
-  <div class="container1">
-    <h2>O que Oferecemos</h2>
-    <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
+    <div class="container1">
+        <h2>O que Oferecemos</h2>
+        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
 
-    <h2>Como Funciona</h2>
-    <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a criar e manter uma rotina equilibrada. Comece preenchendo um questionário personalizado sobre seus interesses e horários disponíveis. Com base nisso, o aplicativo fornecerá recomendações de hobbies e atividades de lazer adaptadas ao seu perfil, além de dicas para melhor organizar seu dia a dia.</p>
+        <h2>Como Funciona</h2>
+        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a criar e manter uma rotina equilibrada. Comece preenchendo um questionário personalizado sobre seus interesses e horários disponíveis. Com base nisso, o aplicativo fornecerá recomendações de hobbies e atividades de lazer adaptadas ao seu perfil, além de dicas para melhor organizar seu dia a dia.</p>
 
-    <a href="#register" class="cta">Registre-se Agora</a>
-  </div>
+        <a href="#register" class="cta">Registre-se Agora</a>
+    </div>
 
-  <div class="container2">
-    <h2>Contribuição para a Saúde Mental</h2>
-    <ul>
-      <li>Promove o Equilíbrio: Oferece tempo para atividades de lazer, ajudando a reduzir o estresse e a sobrecarga mental.</li>
-      <li>Estimula o Autoconhecimento: Através do questionário personalizado, os usuários refletem sobre seus interesses, promovendo o autoconhecimento.</li>
-      <li>Oferece Suporte Personalizado: Fornece recomendações adaptadas a cada usuário para o desenvolvimento de uma rotina mais saudável e equilibrada.</li>
-      <li>Acompanhamento Contínuo: Acompanha o progresso dos usuários e ajusta as recomendações conforme suas necessidades e preferências mudam ao longo do tempo.</li>
-    </ul>
+    <div class="container2">
+        <h2>Contribuição para a Saúde Mental</h2>
+        <ul>
+            <li>Promove o Equilíbrio: Oferece tempo para atividades de lazer, ajudando a reduzir o estresse e a sobrecarga mental.</li>
+            <li>Estimula o Autoconhecimento: Através do questionário personalizado, os usuários refletem sobre seus interesses, promovendo o autoconhecimento.</li>
+            <li>Oferece Suporte Personalizado: Fornece recomendações adaptadas a cada usuário para o desenvolvimento de uma rotina mais saudável e equilibrada.</li>
+            <li>Acompanhamento Contínuo: Acompanha o progresso dos usuários e ajusta as recomendações conforme suas necessidades e preferências mudam ao longo do tempo.</li>
+        </ul>
 
-    <a href="#register" class="cta">Registre-se Agora</a>
-  </div>
+        <a href="#register" class="cta">Registre-se Agora</a>
+    </div>
 
-  <div class="container3">
-    <h2>Equipe</h2>
-    <ul>
-      <li>Larissa Manrique</li>
-      <li>Emilly Caroline</li>
-      <li>Amanda Vitória</li>
-      <li>Ana Paula</li>
-      <li>Lara</li>
-      <li>Vitoria</li>
-    </ul>
-  </div>
-</main>
+    <div class="container3">
+        <h2>Equipe</h2>
+        <ul>
+            <li>Larissa Manrique</li>
+            <li>Emilly Caroline</li>
+            <li>Amanda Vitória</li>
+            <li>Ana Paula</li>
+            <li>Lara</li>
+            <li>Vitoria</li>
+        </ul>
+    </div>
 
-<footer>
-  <p>&copy; 2024 ROUBBIES. Todos os direitos reservados.</p>
-</footer>
+    <div class="container4">
+        <h2>O que Oferecemos</h2>
+        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
 
-</body>
-</html>
+        <h2>Como Funciona</h2>
+        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a criar e manter uma rotina equilibrada. Comece preenchendo um questionário personalizado sobre seus interesses e horários disponíveis. Com base nisso, o aplicativo fornecerá recomendações de hobbies e atividades de lazer adaptadas ao seu perfil, além de dicas para melhor organizar seu dia a dia.</p>
+
+        <a href="#register" class="cta">Registre-se Agora</a>
+    </div>
+
+    <div class="container5">
+        <h2>O que Oferecemos</h2>
+        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
+
+        <h2>Como Funciona</h2>
+        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a
