@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style> 
         /* Estilos CSS */
+        body {
+            padding: 10px; 
+        }
         /* Menu */
         .navbar {
             position: fixed;
@@ -20,35 +19,28 @@
             background-color: #22648B;
             z-index: 1000;
         }
-
         .offcanvas {
             background-color: #22648B;
         }
-
         .navbar-brand, .navbar-nav .nav-link {
             color: white;
         }
-
         .navbar-brand {
             margin-right: auto;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
         }
-
         main {
             margin-top: 40px;
         }
-
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-
         footer {
             background-color: #22648B;
             color: white;
@@ -58,11 +50,9 @@
             bottom: 0;
             width: 100%;
         }
-
         #conversation {
             margin-bottom: 20px;
         }
-
         .options button {
             margin: 5px;
             padding: 8px 16px;
@@ -72,57 +62,46 @@
             color: #fff;
             cursor: pointer;
         }
-
         .options button:hover {
             background-color: #0056b3;
         }
-
         #startButton {
             font-size: 1.2rem;
         }
     </style>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-
-<header>
-    <nav class="navbar navbar-expand-md border-bottom">
-        <div class="container">
-            <a class="navbar-brand d-md-none" href="#">ROUBBIES</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div style="background-color: #22648B;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasLabel">ROUBBIES</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-grow-1 justify-content-between">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pergunta2.html">Teste</a></li>
-                        <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    </ul>
+    <header>
+        <nav class="navbar navbar-expand-md border-bottom">
+            <div class="container">
+                <a class="navbar-brand d-md-none" href="#">ROUBBIES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="background-color: #22648B;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasLabel">ROUBBIES</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav flex-grow-1 justify-content-between">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pergunta2.html">Teste</a></li>
+                            <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
-
+        </nav>
+    </header>
 <main class="container">
     <h1>HobbyBot</h1>
     <div id="conversation"></div>
     <button id="startButton" class="btn btn-primary">Começar Conversa</button>
 </main>
-
-<footer>
-    <p>Rights Reserved &copy; 2024 ROUBBIES</p>
-</footer>
 <script>
 class HobbyBot {
 constructor() {
@@ -219,7 +198,7 @@ const hobbyBot = new HobbyBot();
 
 </script>
 <footer>
-<p>Rights Reserved &copy; 2024 ROUBBIES</p>
+    <p>Rights Reserved &copy; 2024 ROUBBIES</p>
 </footer>
 </body>
 </html>
