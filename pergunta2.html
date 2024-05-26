@@ -13,24 +13,19 @@
             background-color: #B8F0DF;
         }
 
-        .container1, .container2, .container3, .container4, .container5, .container6 {
-            margin: 5px;
+        .container1, .container2, .container3, .container4{
+            margin: none;
             padding: 20px;
         }
 
-        .container1, .container4 {
-            background-color: #B8F0DF;
-            color: #333;
+        .container1, .container3 {
+            background-color: #CEE6F2;
+            color: black;
         }
 
-        .container2, .container6 {
-            background-color: #22648B;
-            color: white;
-        }
-
-        .container3, .container5 {
-            background-color: #5E98F3;
-            color: white;
+        .container2, .container4 {
+            background-color: #EDF4F2;
+            color: black;
         }
 
         h1, h2 {
@@ -78,7 +73,7 @@
         }
 
         .navbar-brand, .navbar-nav .nav-link {
-            color: white;
+          color: white;
         }
 
         .navbar-brand {
@@ -100,7 +95,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    
 <header>
     <nav class="navbar navbar-expand-md border-bottom">
         <div class="container">
@@ -128,54 +123,33 @@
     </nav>
 </header>
 
-<main>
-    <div class="container1">
-        <h2>O que Oferecemos</h2>
-        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
+    <h1>Questionário de Interesses</h1>
+    <form id="interests-form">
+        <div class="container">
+            <div class="container1">
+                <p>Qual é o seu principal interesse?</p>
+                <div class="options">
+                    <label><input type="radio" name="interest" value="Esportes"> Esportes</label>
+                    <label><input type="radio" name="interest" value="Artes"> Artes</label>
+                    <label><input type="radio" name="interest" value="Música"> Música</label>
+                    <label><input type="radio" name="interest" value="Tecnologia"> Tecnologia</label>
+                </div>
+            </div>
+            <div class="container2">
+                <p>Quais tipos de atividades você mais gosta?</p>
+                <div class="options">
+                    <label><input type="checkbox" name="activities" value="Ler"> Ler</label>
+                    <label><input type="checkbox" name="activities" value="Assistir filmes"> Assistir filmes</label>
+                    <label><input type="checkbox" name="activities" value="Cozinhar"> Cozinhar</label>
+                    <label><input type="checkbox" name="activities" value="Praticar esportes"> Praticar esportes</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="cta">Enviar</button>
+    </form>
 
-        <h2>Como Funciona</h2>
-        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a criar e manter uma rotina equilibrada. Comece preenchendo um questionário personalizado sobre seus interesses e horários disponíveis. Com base nisso, o aplicativo fornecerá recomendações de hobbies e atividades de lazer adaptadas ao seu perfil, além de dicas para melhor organizar seu dia a dia.</p>
-
-        <a href="#register" class="cta">Registre-se Agora</a>
-    </div>
-
-    <div class="container2">
-        <h2>Contribuição para a Saúde Mental</h2>
-        <ul>
-            <li>Promove o Equilíbrio: Oferece tempo para atividades de lazer, ajudando a reduzir o estresse e a sobrecarga mental.</li>
-            <li>Estimula o Autoconhecimento: Através do questionário personalizado, os usuários refletem sobre seus interesses, promovendo o autoconhecimento.</li>
-            <li>Oferece Suporte Personalizado: Fornece recomendações adaptadas a cada usuário para o desenvolvimento de uma rotina mais saudável e equilibrada.</li>
-            <li>Acompanhamento Contínuo: Acompanha o progresso dos usuários e ajusta as recomendações conforme suas necessidades e preferências mudam ao longo do tempo.</li>
-        </ul>
-
-        <a href="#register" class="cta">Registre-se Agora</a>
-    </div>
-
-    <div class="container3">
-        <h2>Equipe</h2>
-        <ul>
-            <li>Larissa Manrique</li>
-            <li>Emilly Caroline</li>
-            <li>Amanda Vitória</li>
-            <li>Ana Paula</li>
-            <li>Lara</li>
-            <li>Vitoria</li>
-        </ul>
-    </div>
-
-    <div class="container4">
-        <h2>O que Oferecemos</h2>
-        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
-
-        <h2>Como Funciona</h2>
-        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a criar e manter uma rotina equilibrada. Comece preenchendo um questionário personalizado sobre seus interesses e horários disponíveis. Com base nisso, o aplicativo fornecerá recomendações de hobbies e atividades de lazer adaptadas ao seu perfil, além de dicas para melhor organizar seu dia a dia.</p>
-
-        <a href="#register" class="cta">Registre-se Agora</a>
-    </div>
-
-    <div class="container5">
-        <h2>O que Oferecemos</h2>
-        <p>O Roubbie é um aplicativo desenvolvido para promover o bem-estar mental dos usuários, ajudando-os a descobrir hobbies e a organizar suas rotinas diárias de forma saudável e prazerosa.</p>
-
-        <h2>Como Funciona</h2>
-        <p>O Roubbie oferece uma combinação de ferramentas para ajudar você a
+    <footer>
+        &copy; 2024 ROUBBIE
+    </footer>
+</body>
+</html>
