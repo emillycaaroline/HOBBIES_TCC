@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color:#dfdfdf;
+  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,12 +11,12 @@ body {
   width: 150%;
   max-width: 300px;
   padding: 30px;
-  background-color: #289DD2;
+  background-color:#94b2e4;
   border-radius: 1px;
   border-color: black;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #289DD2;
+
   
 }
 
@@ -47,12 +47,12 @@ p{
   font-size: 16px;
   border: none; 
   border-radius: 13px;
-  background-color:#D1E6F0; 
+  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
   margin-bottom: 10px;
   
 }
 .btn-primary {
-  background-color: #365B6D;
+  background-color: #B3E5FC;
   border: none; 
   width: 100%;
   padding: 10px;
