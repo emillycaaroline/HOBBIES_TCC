@@ -1,419 +1,145 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotina</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
-
+    
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .container {
-        max-width: 960px;
-      }
-
-      /*
-       * Custom translucent site header
-       */
-
-      .site-header {
-        background-color: rgba(0, 0, 0, .85);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
-      }
-
-      .site-header a {
-        color: #8e8e8e;
-        transition: color .15s ease-in-out;
-      }
-
-      .site-header a:hover {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      /*
-       * Dummy devices (replace them with your own or something else entirely!)
-       */
-
-      .product-device {
-        position: absolute;
-        right: 10%;
-        bottom: -30%;
-        width: 300px;
-        height: 540px;
-        background-color: #333;
-        border-radius: 21px;
-        transform: rotate(30deg);
-      }
-
-      .product-device::before {
-        position: absolute;
-        top: 10%;
-        right: 10px;
-        bottom: 10%;
-        left: 10px;
-        content: "";
-        background-color: rgba(255, 255, 255, .1);
-        border-radius: 5px;
-      }
-
-      .product-device-2 {
-        top: -25%;
-        right: auto;
-        bottom: 0;
-        left: 5%;
-        background-color: #e5e5e5;
-      }
-
-      /*
-       * Extra utilities
-       */
-
-      .flex-equal > * {
-        flex: 1;
-      }
-
-      @media (min-width: 768px) {
-        .flex-md-equal > * {
-          flex: 1;
-        }
-      }
-
-
-/* links que estao dentro do menu */
-.nav-link {
-        color: white; 
-        margin-right: 160px;
-    }
-    /* Estilo adicionais */
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-   
-        /* Estilos gerais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5fdfb;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilo do cabeçalho */
-        .site-header {
-            background-color: #99CCFF;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-
-        .site-header a {
-            color: #ffffff;
-            margin-right: 20px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .site-header a:hover {
-            color: #cfd8dc;
-        }
-
-/* Estilo do corpo */
-main {
-    padding: 20px;
-    
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Estilo do formulário */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-}
-
-input[type="time"] {
-    padding: 8px;
-    margin-bottom: 15px;
-    width: calc(100% - 20px);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #22648B;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #18566f;
-}
-
-/* Estilos específicos para as áreas de saúde */
-.health-section {
-    margin-bottom: 40px;
-}
-
-.health-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.progress-bar {
-    height: 20px;
-}
-
-.progress-label {
-    font-size: 14px;
-}
-
-/* Estilos para os gráficos */
-.chart-container {
-    width: 100%;
-    height: 300px;
-    margin-top: 20px;
-}
-
-.chart {
-    width: 100%;
-    height: 100%;
-}
-
-/* links que estão dentro do menu */
-.nav-link {
-    color: white; 
-    margin-right: 160px;
-}
-    #chart-container {
-      width: 100%;
-      text-align: center;
+       /* Estilo do cabeçalho */
+    .navbar {
+      background-color: #5C9EAD; /* Azul suave para tranquilidade */
     }
 
-    #chart {
-      width: 80%;
-      margin: 20px auto;
+    /* Estilo dos links do menu */
+    .nav-link {
+      color: #FFFFFF; /* Mantendo branco para bom contraste */
     }
 
-    
-
-canvas {
-    width: 300px; /* Reduzindo a largura do gráfico */
-    height: 150px; /* Reduzindo a altura do gráfico */
-    max-width: 100%; /* Garantindo que o gráfico não ultrapasse a largura máxima do contêiner */
-    margin: 20px auto;
-    display: block;
-  }
-
-
-/* Estilos para os gráficos */
-.chart-container {
-    width: 100%;
-    height: 300px;
-    margin-top: 20px;
-}
-
-.chart {
-    width: 100%;
-    height: 100%;
-}
+    /* Estilo do botão */
+    .btn-primary {
+      background-color: #5C9EAD; /* Azul para consistência */
+      color: #FFFFFF;
+    }
 
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Header -->
     <!-- Menu responsivo -->
-    <header>
-        <nav style="background-color: #22648B;"  class="navbar navbar-expand-md border-bottom">
-            <div class="container">
-                <a class="navbar-brand d-md-none" href="#">ROUBBIES</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div style="background-color: #22648B;"  class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                    <div class="offcanvas-header">
-                        <h5  class="offcanvas-title" id="offcanvasLabel">ROUBBIES</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav flex-grow-1 justify-content-between">
-                              <li class="nav-item"><a class="nav-link" href="index.html">Roubbies</a></li>
-                              <li class="nav-item"><a class="nav-link" href="sistemar.html">Rotina</a></li>
-                              <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
-                              <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
-                              <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
-                              <li class="nav-item"><a class="nav-link" href="login.html">login</a></li>
-                            </ul>
-                          </div>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Roubbies</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="index.html">Roubbies</a></li>
+            <li class="nav-item"><a class="nav-link" href="sistemar.html">Rotina</a></li>
+            <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
+            <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
+            <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <main>
+        <div class="container">
+            <!-- Form for adding unavailable time slots -->
+            <form id="horarioForm">
+                <div class="mb-3">
+                    <label for="horariosUsuario" class="form-label">Horários Indisponíveis:</label>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Horário Inicial</th>
+                                <th>Horário Final</th>
+                                <th>Motivo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="horariosTableBody">
+                            <!-- Rows for unavailable time slots will be dynamically added here -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary" id="adicionarHorarioBtn">Adicionar Horário</button>
                 </div>
-            </div>
-        </nav>
-    </header>
-<!-- Todo o corpo da pagina  -->
-<main>
-  <div class="container">
-    <h1>Registre Seus Horários</h1>
-    <form id="horarioForm">
-        <label for="dormir">Horário de Dormir:</label>
-        <input type="time" id="dormir" name="dormir">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+            
+  <script>
+    document.getElementById('horarioForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Aqui você pode obter os dados dos horários indisponíveis e enviá-los para onde quiser
+        // Por exemplo, você pode usar o método fetch() para enviar os dados para um servidor
 
-        <label for="acordar">Horário que Acorda:</label>
-        <input type="time" id="acordar" name="acordar">
+        // Aqui está um exemplo de como você pode obter os dados dos horários indisponíveis:
+        const horarios = [];
+        const tableRows = document.querySelectorAll('#horariosTableBody tr');
+        tableRows.forEach(row => {
+            const horaInicio = row.querySelector('.horaInicio').value;
+            const horaFim = row.querySelector('.horaFim').value;
+            const motivo = row.querySelector('.motivo').value;
+            if (horaInicio && horaFim) {
+                horarios.push({ horaInicio, horaFim, motivo });
+            }
+        });
+        console.log(horarios);
+    });
 
-        <label for="trabalhoEntrada">Horário de Trabalho/Estudo (Entrada):</label>
-        <input type="time" id="trabalhoEntrada" name="trabalhoEntrada">
+    document.getElementById('adicionarHorarioBtn').addEventListener('click', function() {
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td><input type="time" class="form-control horaInicio"></td>
+            <td><input type="time" class="form-control horaFim"></td>
+            <td><input type="text" class="form-control motivo" placeholder="Motivo"></td>
+        `;
+        document.getElementById('horariosTableBody').appendChild(newRow);
+    });
+</script>
+            <!-- Health Progress Tracking -->
+            <div class="row">
+                <div id="linha-atv" class="col-md-6">
+                    <h1 class="text-center">Acompanhamento do Progresso</h1>
 
-        <label for="trabalhoSaida">Horário de Trabalho/Estudo (Saída):</label>
-        <input type="time" id="trabalhoSaida" name="trabalhoSaida">
+                    <div class="health-section">
+                        <h2 class="health-title">Saúde Física</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress-label">70% - Exercícios, alimentação balanceada, etc.</div>
+                    </div>
 
-        <button type="submit">Salvar</button>
-    </form>
-    <canvas id="myChart" width="400" height="200"></canvas>
-</div>
-      
-      
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-          document.getElementById('horarioForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-      
-            // Obter os valores dos campos
-            const dormir = document.getElementById('dormir').value;
-            const acordar = document.getElementById('acordar').value;
-            const trabalhoEntrada = document.getElementById('trabalhoEntrada').value;
-            const trabalhoSaida = document.getElementById('trabalhoSaida').value;
-      
-            // Calcular horas vagas e horas ativas
-            const horasDormidas = calcularDiferencaDeHoras(dormir, acordar);
-            const horasTrabalhadas = calcularDiferencaDeHoras(trabalhoEntrada, trabalhoSaida);
-            const horasVagas = 24 - horasDormidas - horasTrabalhadas;
-            const horasAtivas = horasDormidas + horasTrabalhadas;
-      
-            // Exibir gráfico com os dados
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const myChart = new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Horas Vagas', 'Horas Ativas'],
-                datasets: [{
-                  label: 'Horas',
-                  data: [horasVagas, horasAtivas],
-                  backgroundColor: [
-                    'rgba(54, 162, 235, 0.2)', // Azul para horas vagas
-                    'rgba(255, 99, 132, 0.2)', // Vermelho para horas ativas
-                  ],
-                  borderColor: [
-                    'rgba(54, 162, 235, 1)', // Azul para horas vagas
-                    'rgba(255, 99, 132, 1)', // Vermelho para horas ativas
-                  ],
-                  borderWidth: 1
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
-          });
-      
-          function calcularDiferencaDeHoras(horaInicial, horaFinal) {
-            const [horaInicialHoras, horaInicialMinutos] = horaInicial.split(':').map(Number);
-            const [horaFinalHoras, horaFinalMinutos] = horaFinal.split(':').map(Number);
-      
-            const diferencaHoras = horaFinalHoras - horaInicialHoras;
-            const diferencaMinutos = horaFinalMinutos - horaInicialMinutos;
-      
-            return diferencaHoras + diferencaMinutos / 60;
-          }
-        </script>
-    <div class="container">
-      <h1 class="text-center">Acompanhamento do Progresso</h1>
-  
-      <!-- Saúde Física -->
-      <div class="health-section">
-          <h2 class="health-title">Saúde Física</h2>
-          <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="health-section">
+                        <h2 class="health-title">Saúde Mental</h2>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress-label">50% - Meditação, hobbies relaxantes, etc.</div>
+                    </div>
+
+                    <div class="health-section">
+                        <h2 class="health-title">Saúde Espiritual</h2>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="progress-label">40% - Práticas espirituais, conexão com a natureza, etc.</div>
+                  </div>
+              </div>
           </div>
-          <div class="progress-label">70% - Exercícios, alimentação balanceada, etc.</div>
       </div>
-  
-      <!-- Saúde Mental -->
-      <div class="health-section">
-          <h2 class="health-title">Saúde Mental</h2>
-          <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="progress-label">50% - Meditação, hobbies relaxantes, etc.</div>
-      </div>
-  
-      <!-- Saúde Espiritual -->
-      <div class="health-section">
-          <h2 class="health-title">Saúde Espiritual</h2>
-          <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <div class="progress-label">40% - Práticas espirituais, conexão com a natureza, etc.</div>
-      </div>
-  
-      <!-- Gráficos adicionais podem ser adicionados aqui -->
-  
-  </div>
+  </main>
 
-  
-
-</main>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </body>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
