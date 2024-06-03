@@ -1,14 +1,3 @@
-
-Claro, vou ajustar o código HTML e CSS de acordo com as novas especificações de cores:
-
-Cabeçalho e botões: Azul suave (#5C9EAD)
-Rodapé: Verde suave (#88D498)
-Links no rodapé: Coral (#F77F00)
-Links no hover: Tons mais escuros do mesmo tom
-Aqui está o código atualizado:
-
-html
-Copiar código
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -294,28 +283,42 @@ main {
 <!-- Menu responsivo -->
 <header>
     <nav class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title">Roubbies</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav flex-grow-1 justify-content-between">
-            <li class="nav-item"><a class="nav-link" href="index.html">Roubbies</a></li>
-            <li class="nav-item"><a class="nav-link" href="sistemar.html">Rotina</a></li>
-            <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
-            <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
-            <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-          </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Roubbies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Roubbies</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Roubbies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sistemar.html">Rotina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notas.html">Notas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agenda2.html">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="informa2.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
   </header>
-
 <main>
     <div class="container">
         <h1>Bem-vindo ao seu Bloco de Notas</h1>
