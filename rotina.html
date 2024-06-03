@@ -205,29 +205,45 @@
 </head>
 <body>
   <!-- Menu responsivo -->
-<header>
-  <nav class="navbar navbar-expand-md">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Roubbies</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Roubbies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Roubbies</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="inicio.html">Roubbies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rotina.html">Rotina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notas.html">Notas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agenda.html">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav flex-grow-1 justify-content-between">
-          <li class="nav-item"><a class="nav-link" href="index.html">Roubbies</a></li>
-          <li class="nav-item"><a class="nav-link" href="sistemar.html">Rotina</a></li>
-          <li class="nav-item"><a class="nav-link" href="notas.html">Notas</a></li>
-          <li class="nav-item"><a class="nav-link" href="agenda2.html">Agenda</a></li>
-          <li class="nav-item"><a class="nav-link" href="informa2.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
+
   <!-- Rotina e registros -->
   <main>
       <div class="container">
