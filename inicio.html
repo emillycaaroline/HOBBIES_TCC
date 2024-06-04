@@ -11,41 +11,48 @@
   <!-- Bootstrap core CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* PALETA DE CORES  
+          VERDE #9CC1A9
+
+          AMARELO #DEC78C
+
+          AZUL #A0B8CD
+
+          Azul mais escuro #6F90B4
+*/
+
+
     /* Estilo do cabeçalho */
     .navbar {
-      background-color: #6195CD; /* Azul suave para tranquilidade */
+      background-color: #6F90B4;
     }
 
-    /* Estilo dos links do menu */
+    /* links do menu */
     .nav-link {
       color: #FFFFFF;
     }
 
-    /* Estilo do botão */
+    /* botão */
     .btn-primary {
-      background-color: #5C9EAD;
+      background-color: #9CC1A9;
       color: #FFFFFF;
     }
 
     .btn-primary:hover {
-      background-color: #4A8590;
+      background-color: #DEC78C; 
     }
 
     /* Estilo do rodapé */
     footer {
-      background-color: #88D498;
+      background-color: #9CC1A9; 
       color: #FFFFFF;
     }
 
-    
-    /* Estilo do texto */
-    .text-muted {
-      color: #6C757D; 
-    }
     /* Estilo do corpo */
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f0f0f0;
+      background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
+
       margin: 0;
     }
 
@@ -55,7 +62,6 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
-    
       padding: 20px;
     }
 
@@ -69,18 +75,16 @@
       padding: 10px;
       transition: transform 0.3s;
     }
-    .card, img{
-      margin: auto;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
 
     .card img {
       width: 100px;
       height: 100px;
-      align-content: center;
+      margin: auto;
+      display: block;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
     }
 
     .card h2 {
@@ -89,7 +93,7 @@
     }
 
     .card button {
-      background-color: #5C9EAD;
+      background-color: #9CC1A9;
       color: white;
       border: none;
       padding: 9px 2px;
@@ -102,7 +106,7 @@
     }
 
     .card button:hover {
-      background-color: #45a049;
+      background-color: #9CC1A9;
     }
 
     /* Estilo do modal */
@@ -122,14 +126,14 @@
       background-color: white;
       margin: 15% auto;
       padding: 20px;
-      border: 1px solid #888;
+      border: 1px solid #DEC78C;
       width: 80%;
       max-width: 500px;
       border-radius: 10px;
     }
 
     .close {
-      color: #aaa;
+      color: #DEC78C;
       float: right;
       font-size: 28px;
       font-weight: bold;
@@ -141,24 +145,25 @@
       text-decoration: none;
       cursor: pointer;
     }
+
     .offcanvas-body {
-      background-color: #6195CD; /* Cor de fundo do menu */
+      background-color: #6F90B4;
     }
 
     .offcanvas-header {
-      background-color: #5C9EAD; /* Cor de fundo do cabeçalho */
+      background-color: #6F90B4;
     }
 
     .offcanvas-title {
-      color: #FFFFFF; /* Cor do texto do cabeçalho */
+      color: #FFFFFF;
     }
 
     .navbar-nav .nav-link {
-      color: #FFFFFF; /* Cor do texto dos links do menu */
+      color: #FFFFFF;
     }
 
     .btn-close {
-      color: #FFFFFF; /* Cor do botão de fechar */
+      color: #FFFFFF;
     }
 
     /* Estilo dos artigos */
@@ -198,8 +203,8 @@
   </style>
 </head>
 <body>
-  <!-- Menu responsivo -->
-  <header>
+   <!-- Menu responsivo -->
+   <header>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid">
         <img src="img/logo_branco.png" alt="some text" width=100 height=50>
@@ -241,25 +246,25 @@
   <!-- Corpo da página -->
   <main>
     <!-- Introdução e botão para teste de hobbies -->
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
       <img class="img-fluid" src="#" alt="">
       <h1 class="display-4 fw-normal">Descubra o Poder dos Hobbies</h1>
       <p class="lead fw-normal">Roubbies é o seu parceiro definitivo para uma vida mais equilibrada e feliz. Com recomendações personalizadas de hobbies e uma organização flexível de rotinas, você pode encontrar o equilíbrio perfeito entre trabalho e lazer.</p>
-      <a class="btn btn-primary" href="teste.html">Descubra um novo hobbie</a>
+      <a class="btn btn-primary" href="questionario.html">Descubra um novo hobbie</a>
     </div>
 
     <!-- 3 pilares de saúde -->
     <div class="container card-container">
       <div class="card" id="espiritualidade">
-        <img src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/16439.png" alt="Espiritualidade"><br>
+        <img src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/16439.png" alt="Espiritualidade">
         <button onclick="showMethods('Espiritualidade')">Espiritualidade</button>
       </div>
       <div class="card" id="emotional">
-        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/6563627-emocional-maturidade-black-glifo-icone-capacidade-de-controlar-e-gerenciar-emocoes-confianca-e-responsabilidade-madura-mentalidade-silhueta-simbolo-em-espaco-branco-ilustracao-isolada-vetor.jpg" alt="Espiritualidade"><br>
+        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/6563627-emocional-maturidade-black-glifo-icone-capacidade-de-controlar-e-gerenciar-emocoes-confianca-e-responsabilidade-madura-mentalidade-silhueta-simbolo-em-espaco-branco-ilustracao-isolada-vetor.jpg" alt="Emocional">
         <button onclick="showMethods('Emocional')">Emocional</button>
       </div>
       <div class="card" id="social">
-        <img src="https://cdn-icons-png.flaticon.com/512/3285/3285177.png" alt="Espiritualidade"><br>
+        <img src="https://cdn-icons-png.flaticon.com/512/3285/3285177.png" alt="Social">
         <button onclick="showMethods('Social')">Social</button>
       </div>
     </div>
@@ -273,111 +278,58 @@
       </div>
     </div>
 
-    <!-- Seção de registros do usuário -->
+    <!-- Seção de artigos -->
     <div class="container text-center my-5">
-      <h2 class="display-5">Adicionar layout com os dados do usuário no app.</h2>
-      <p class="lead">Adicionar registros, processo e progresso do usuário aqui de forma mais atraente com gráficos e dados para ser compreendido facilmente.</p>
-    </div>
-
-
-      <!-- Seção de artigos  -->
-    <div class="container text-center my-5">
-      <h2 class="display-5">Adicionar Artigos</h2>
-      <p class="lead">Adicionar vários artigos que possam ensinar, lembrar, avisar. Qualquer artigo que seja necessário e que tenha a ver com o problema e a solução (Roubbies) esteja envolvido.</p>
-
       <div class="artigos-container">
         <div class="card artigos">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
+          <h5 class="card-title">Saiba como é bom meditar</h5>
         </div>
         <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
+          <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+          <h5 class="card-title">Exercícios para iniciantes
+          </h5>
         </div>
         <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
+          <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+          <h5 class="card-title">Qual seria a dieta certa?</h5>
         </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
-        <div class="card artigos">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
-          <h5 class="card-title">Meditação contribui para a saude mental</h5>
-        </div>
+          <div class="card artigos">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
+            <h5 class="card-title">Saiba como é bom meditar</h5>
+          </div>
+          <div class="card artigos">
+            <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+            <h5 class="card-title">Exercícios para iniciantes
+            </h5>
+          </div>
+          <div class="card artigos">
+            <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+            <h5 class="card-title">Qual seria a dieta certa?</h5>
+          </div>
+            <div class="card artigos">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
+              <h5 class="card-title">Saiba como é bom meditar</h5>
+            </div>
+            <div class="card artigos">
+              <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+              <h5 class="card-title">Exercícios para iniciantes
+              </h5>
+            </div>
+            <div class="card artigos">
+              <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+              <h5 class="card-title">Qual seria a dieta certa?</h5>
+            </div>
         
       </div>
     </div>
-  </main>   
-    
   </main>
-
-  <!-- Rodapé -->
-  <footer class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24">
-          <title>Product</title>
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-        </svg>
-        <small class="d-block mb-3 text-muted">&copy; 2017–2021 ROUBBIES. Todos os direitos reservados.</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Resource name</a></li>
-          <li><a class="link-secondary" href="#">Resource</a></li>
-          <li><a class="link-secondary" href="#">Another resource</a></li>
-          <li><a class="link-secondary" href="#">Final resource</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Business</a></li>
-          <li><a class="link-secondary" href="#">Education</a></li>
-          <li><a class="link-secondary" href="#">Government</a></li>
-          <li><a class="link-secondary" href="#">Gaming</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Team</a></li>
-          <li><a class="link-secondary" href="#">Locations</a></li>
-          <li><a class="link-secondary" href="#">Privacy</a></li>
-          <li><a class="link-secondary" href="#">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     const pillars = {
       "Espiritualidade": ["Ler um livro", "Meditar", "Rezar"],
-      "Exercício Físico": ["Caminhar", "Correr", "Fazer Yoga"],
-      "Nutrição": ["Comer frutas", "Beber água", "Planejar refeições"],
-      "Sono": ["Dormir 8 horas", "Criar rotina de sono", "Evitar telas antes de dormir"],
-      "Gestão do Estresse": ["Respiração profunda", "Jornalizar", "Fazer algo criativo"]
+      "Emocional": ["Respiração profunda", "Jornalizar", "Fazer algo criativo"],
+      "Social": ["Conversar com amigos", "Participar de eventos", "Ajudar alguém"]
     };
 
     function showMethods(pillar) {
@@ -410,5 +362,10 @@
       }
     }
   </script>
+  <!-- Rodapé -->
+<footer class="text-center py-3">
+  <p>Roubbies &copy; 2024 - Todos os direitos reservados</p>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Meditação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      overflow-x: hidden; /* Impede rolagem horizontal */
+      background-color: #f0f0f0;
+      position: relative;
+    }
+
+    .stars {
+      background: url('https://www.transparenttextures.com/patterns/starfield.png');
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      animation: animate 50s linear infinite;
+    }
+
+    @keyframes animate {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 100% 100%;
+      }
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #5C9EAD;
+      color: #FFFFFF;
+      text-align: center;
+      transition: background-color 0.5s;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background-color: #FFFFFF;
+      color: #5C9EAD;
+      padding: 12px 24px;
+      font-size: 1.25rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      border: 2px solid #5C9EAD;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #4A8590;
+      color: #FFFFFF;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .slide-container {
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      transform: translateY(-50%);
+    }
+
+    .control-btn {
+      background-color: #FFFFFF;
+      color: #5C9EAD;
+      padding: 8px 16px;
+      font-size: 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: background-color 0.3s, color 0.3s;
+      border: 2px solid #5C9EAD;
+      cursor: pointer;
+    }
+
+    .control-btn:hover {
+      background-color: #4A8590;
+      color: #FFFFFF;
+    }
+
+    footer {
+      background-color: #88D498;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
+    .feature {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #5C9EAD;
+    }
+
+    .feature p {
+      font-size: 1.1rem;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Meditação</h1>
+      <p>Descubra a paz interior através da meditação. Encontre harmonia, equilíbrio e bem-estar.</p>
+      <a class="btn btn-primary" href="#">Comece Agora</a>
+    </div>
+  </div>
+
+  <div class="slide-container">
+    <div class="slides">
+      <div class="slide">
+        <img src="https://magscan.com.br/wp-content/uploads/2020/04/original-2ce8ad3de83875daa42bae2bc572c235.jpeg" alt="Meditação na natureza">
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRFuxSd4FeX_Zbyn6iN1XamHx7FUyaWcyFg&s" alt="Meditação ao pôr do sol">
+      </div>
+      <div class="slide">
+        <img src="https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2020/08/6-aplicativos-que-v%C3%A3o-ensinar-voc%C3%AA-a-praticar-medita%C3%A7%C3%A3o.jpg?quality=100&strip=info&w=720&h=440&crop=1" alt="Meditação com velas">
+      </div>
+    </div>
+    <div class="controls">
+      <a class="control-btn" onclick="prevSlide()">Anterior</a>
+      <a class="control-btn" onclick="nextSlide()">Próximo</a>
+    </div>
+  </div>
+  <div class="container features">
+    <div class="feature">
+      <h2>Benefícios da Meditação</h2>
+      <p>A meditação pode reduzir o estresse, melhorar a concentração, promover a saúde mental e física e aumentar a sensação de bem-estar.</p>
+    </div>
+    <div class="feature">
+      <h2>Dicas para Iniciantes</h2>
+      <p>Comece praticando por alguns minutos todos os dias. Encontre um lugar tranquilo e       <p>Concentre-se na sua respiração.</p>
+    </div>
+    <div class="feature">
+      <h2>Tipos de Meditação</h2>
+      <p>Existem diferentes tipos de meditação, incluindo mindfulness, meditação guiada, meditação transcendental e muito mais. Experimente e encontre o que funciona melhor para você.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Meditação. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function prevSlide() {
+      index--;
+      if (index < 0) {
+        index = slide.length - 1;
+      }
+      updateSlide();
+    }
+
+    function nextSlide() {
+      index++;
+      if (index === slide.length) {
+        index = 0;
+      }
+      updateSlide();
+    }
+
+    function updateSlide() {
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+  </script>
+</body>
+</html>
