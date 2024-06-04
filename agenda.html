@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agenda</title>
+  <title>Roubbies</title>
 
   <!-- Importar fonte Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     /* PALETA DE CORES  
           VERDE #9CC1A9
 
-          AMARELO #DEC78C
+          verde escuro #65896C
 
           AZUL #A0B8CD
 
@@ -22,7 +22,8 @@
 */
     /* Estilo do cabeçalho */
     .navbar {
-      background-color: #6F90B4;
+      background-color: #e4edff;  /* -------------------------------------------------------------- */
+      
     }
 
     /* links do menu */
@@ -37,7 +38,7 @@
     }
 
     .btn-primary:hover {
-      background-color: #DEC78C; 
+      background-color: #65896C; 
     }
 
     /* Estilo do rodapé */
@@ -50,7 +51,7 @@
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
-
+      
       margin: 0;
     }
 
@@ -104,7 +105,7 @@
     }
 
     .card button:hover {
-      background-color: #DEC78C;
+      background-color: #65896C;
     }
 
     /* Estilo do modal */
@@ -124,14 +125,14 @@
       background-color: white;
       margin: 15% auto;
       padding: 20px;
-      border: 1px solid #DEC78C;
+      border: 1px solid #65896C;
       width: 80%;
       max-width: 500px;
       border-radius: 10px;
     }
 
     .close {
-      color: #DEC78C;
+      color: #65896C;
       float: right;
       font-size: 28px;
       font-weight: bold;
@@ -145,7 +146,7 @@
     }
 
     .offcanvas-body {
-      background-color: #6F90B4;
+       background-color: #e4edff; /* -------------------------------------------------------------- */
     }
 
     .offcanvas-header {
@@ -198,14 +199,15 @@
       text-align: center;
       margin-top: 10px;
     }
+
   </style>
 </head>
 <body>
    <!-- Menu responsivo -->
    <header>
-    <nav class="navbar navbar-expand-md">
-      <div class="container-fluid">
-        <img src="img/logo_branco.png" alt="some text" width=100 height=50>
+    <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <img  src="img/logo-ft.png" alt="some text" width=100  height=40 style="margin-top: 5px;">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -217,22 +219,22 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" href="inicio.html">Roubbies</a>
+                <a style="color: black;" class="nav-link" href="inicio.html">Roubbies</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="rotina.html">Rotina</a>
+                <a style="color: black;" class="nav-link" href="rotina.html">Rotina</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="notas.html">Notas</a>
+                <a style="color: black;" class="nav-link" href="notas.html">Notas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="agenda.html">Agenda</a>
+                <a style="color: black;" class="nav-link" href="agenda.html">Agenda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre</a>
+                <a style="color: black;" class="nav-link" href="sobre.html">Sobre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a style="color: black;" class="nav-link" href="login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -240,6 +242,7 @@
       </div>
     </nav>
   </header>
+  <hr>
 
   <!-- Corpo da página -->
   <main>

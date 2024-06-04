@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roubbies</title>
+
+  <!-- Importar fonte Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    h1 {
+        text-align: center;
+        color: #5C9EAD; /* Azul principal */
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 16px;
+        margin-top: 10px;
+        color: #6C757D; /* Cinza suave para textos secundários */
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        border: 2px solid #5C9EAD; /* Azul principal */
+        border-radius: 10px;
+        box-sizing: border-box;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"><path fill="%235C9EAD" fill-rule="evenodd" d="M7 8l7-8H0z"/></svg>') no-repeat right 10px center;
+        background-size: 12px 12px;
+        color: #333;
+    }
+
+    button {
+        padding: 12px 20px;
+        background-color: #5C9EAD; /* Azul principal */
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #4A8590; /* Azul mais escuro no hover */
+    }
+
+    #result {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #88D498; /* Verde para destacar */
+        border: 2px solid #88D498; /* Verde para destacar */
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: white;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+      background-color: #5C9EAD; /* Azul principal */
+    }
+
+    .nav-link {
+      color: #FFFFFF;
+    }
+
+    .btn-primary {
+      background-color: #5C9EAD; /* Azul principal */
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: #4A8590; /* Azul mais escuro no hover */
+    }
+
+    footer {
+      background-color: #88D498; /* Verde para destacar */
+      color: #FFFFFF;
+    }
+
+    .link-secondary {
+      color: #F77F00; /* Coral */
+    }
+
+    .link-secondary:hover {
+      color: #D66900; /* Coral mais escuro no hover */
+    }
+
+    .text-muted {
+      color: #6C757D; /* Cinza suave para textos secundários */
+    }
+  </style>
+</head>
+<body>
+  <!-- Menu responsivo -->
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <img src="img/logo_branco.png" alt="some text" width=100 height=50>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Roubbies</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="inicio.html">Roubbies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rotina.html">Rotina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notas.html">Notas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agenda.html">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+      <h1>Bem-vindo ao Roubbies</h1>
+      <form id="chatbot-form">
+          <label for="nome">Digite seu nome:</label>
+          <input type="text" id="nome" name="nome" required>
+          
+          <label for="email">Digite seu email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="questao_1">Você frequentemente gosta de atividades em grupo.</label>
+          <select id="questao_1" name="questao_1" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="0">Nunca</option>
+              <option value="1">Raramente</option>
+              <option value="2">Às vezes</option>
+              <option value="3">Frequentemente</option>
+              <option value="4">Muito frequentemente</option>
+          </select>
+
+          <label for="questao_2">Você frquentemente gosta de conhecer novas pessoas.</label>
+          <select id="questao_2" name="questao_2" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="0">Nunca</option>
+              <option value="1">Raramente</option>
+              <option value="2">Às vezes</option>
+              <option value="3">Frequentemente</option>
+              <option value="4">Muito frequentemente</option>
+          </select>
+
+          <label for="questao_3">Você frequentemente gosta de atividades ao ar livre.</label>
+          <select id="questao_3" name="questao_3" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="0">Nunca</option>
+              <option value="1">Raramente</option>
+              <option value="2">Às vezes</option>
+              <option value="3">Frequentemente</option>
+              <option value="4">Muito frequentemente</option>
+          </select>
+          <label for="questao_4">Você frequentemente pratica atividades físicas intensas?</label>
+          <select id="questao_4" name="questao_4" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="0">Nunca</option>
+              <option value="1">Raramente</option>
+              <option value="2">Às vezes</option>
+              <option value="3">Frequentemente</option>
+              <option value="4">Muito frequentemente</option>
+          </select>
+          <!-- Vitoria perguntas -->
+          <form id="stressForm">
+            <label for="perg1">Nos últimos 30 dias, com que frequência você se sentiu nervoso ou estressado?</label>
+                <select name="perg1" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="0">Nunca</option>
+                    <option value="1">Raramente</option>
+                    <option value="2">Às vezes</option>
+                    <option value="3">Frequentemente</option>
+                    <option value="4">Muito frequentemente</option>
+                </select>
+            </label><br><br>
+            <label for="perg2">Com que frequência você teve problemas para dormir por causa de preocupações?</label>
+                <select name="perg2" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="0">Nunca</option>
+                    <option value="1">Raramente</option>
+                    <option value="2">Às vezes</option>
+                    <option value="3">Frequentemente</option>
+                    <option value="4">Muito frequentemente</option>
+                </select>
+            </label><br><br>
+            <label for="perg3">Com que frequência você sentiu que não conseguia controlar as coisas importantes na sua vida?</label>
+                <select name="perg3" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="0">Nunca</option>
+                    <option value="1">Raramente</option>
+                    <option value="2">Às vezes</option>
+                    <option value="3">Frequentemente</option>
+                    <option value="4">Muito frequentemente</option>
+                </select>
+            </label><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="result"></div>
+        <script>
+            document.getElementById('stressForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const form = new FormData(event.target);
+                const scores = {
+                    nervous: parseInt(form.get('nervous')),
+                    sleep: parseInt(form.get('sleep')),
+                    control: parseInt(form.get('control')),
+                };
+                const totalScore = scores.perg1 + scores.perg2 + scores.perg3;
+                let result;
+                if (totalScore <= 3) {
+                    result = "Baixo nível de stress.";
+                } else if (totalScore <= 6) {
+                    result = "Nível moderado de stress.";
+                } else {
+                    result = "Alto nível de stress.";
+                }
+                document.getElementById('result').innerText = result;
+            });
+        </script>
+    </body>
+  </div>
+
+          <script>
+            document.getElementById('chatbot-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+      
+                const nome = document.getElementById('nome').value;
+                const respostas = {
+                    questao_1: document.getElementById('questao_1').value,
+                    questao_2: document.getElementById('questao_2').value,
+                    questao_3: document.getElementById('questao_3').value,
+                    questao_4: document.getElementById('questao_4').value
+                };
+      
+                const tipo_de_pessoa = determinar_tipo_de_pessoa(respostas);
+                const sugestoes = obter_sugestoes(tipo_de_pessoa);
+      
+                let resultHtml = `<h2>Olá, ${nome}!</h2><p>Com base nas suas respostas, aqui estão algumas sugestões de hobbies para você:</p><ul>`;
+                sugestoes.forEach(sugestao => {
+                    resultHtml += `<li>${sugestao}</li>`;
+                });
+                resultHtml += `</ul>`;
+      
+                document.getElementById('result').innerHTML = resultHtml;
+            });
+      
+            function determinar_tipo_de_pessoa(respostas) {
+                const extrovertido = parseInt(respostas.questao_1) + parseInt(respostas.questao_2) < 4;
+                const ativo = parseInt(respostas.questao_3) + parseInt(respostas.questao_4) < 4;
+      
+                if (extrovertido && ativo) {
+                    return 'extrovertido_ativo';
+                } else if (extrovertido && !ativo) {
+                    return 'extrovertido_calmo';
+                } else if (!extrovertido && ativo) {
+                    return 'introvertido_ativo';
+                } else {
+                    return 'introvertido_calmo';
+                }
+            }
+      
+            function obter_sugestoes(tipo_de_pessoa) {
+                const sugestoes = {
+                    'extrovertido_ativo': ['Esportes em equipe', 'Dança', 'Artes marciais', 'Caminhadas em grupo'],
+                    'extrovertido_calmo': ['Clubes de leitura', 'Aulas de culinária', 'Voluntariado', 'Jardinagem'],
+                    'introvertido_ativo': ['Caminhadas', 'Corrida', 'Yoga', 'Ciclismo'],
+                    'introvertido_calmo': ['Pintura', 'Escrita', 'Tocar um instrumento musical', 'Jogos de tabuleiro']
+                };
+                return sugestoes[tipo_de_pessoa];
+            }
+        </script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      </body>
+      </html>
+          
