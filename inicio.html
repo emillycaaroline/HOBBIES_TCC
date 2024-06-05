@@ -1,337 +1,339 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roubbies</title>
+  <!-- Importar fonte Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* PALETA DE CORES  
+          VERDE #9CC1A9
+          verde escuro #65896C
+          AZUL #A0B8CD
+          Azul mais escuro #6F90B4
+*/
+    /* Estilo do cabeçalho */
+    .navbar {
+      background-color: #e4edff;  /* -------------------------------------------------------------- */
+      
+    }
+    /* links do menu */
+    .nav-link {
+      color: #FFFFFF;
+    }
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    /* botão */
+    .btn-primary {
+      background-color: #9CC1A9;
+      background-color: #82a6cc;
+      color: #FFFFFF;
+    }
 
+    .btn-primary:hover {
+      background-color: #65896C; 
+    }
+    /* Estilo do rodapé */
+    footer {
+      background-color: #9CC1A9; 
+      color: #FFFFFF;
+    }
+    /* Estilo do corpo */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
+      
+      margin: 0;
+    }
+    /* Estilo das cartas */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 160px;
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      display: block;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h2 {
+      font-size: 18px;
+      margin: 15px 0;
+    }
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>Servion | Landing, Responsive &amp; Business Templatee</title>
+    .card button {
+      background-color: #9CC1A9;
+      background-color: #82a6cc;
+      color: white;
+      border: none;
+      padding: 9px 2px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #65896C;
+    }
+    /* Estilo do modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #65896C;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+    .close {
+      color: #65896C;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .offcanvas-body {
+       background-color: #e4edff; /* -------------------------------------------------------------- */
+    }
 
+    .offcanvas-header {
+      background-color: #6F90B4;
+      background-color: #6e98c4;
+    }
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="assets/css/theme.css" rel="stylesheet" />
-
-  </head>
-
-
-  <body>
-
-    <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" height="24" alt="..." /></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#inicio.html">Home</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#rotina.html">Rotina</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#notas.html">Notas</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#agenda">Agenda</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#sobre.html">Sobre</a></li>
+    .offcanvas-title {
+      color: #FFFFFF;
+    }
+    .navbar-nav .nav-link {
+      color: #FFFFFF;
+    }
+    .btn-close {
+      color: #FFFFFF;
+    }
+    /* Estilo dos artigos */
+    .artigos-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+    .artigos-container::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+    .artigos {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 200px;
+      margin-right: 10px;
+      border-radius: 10px;
+      scroll-snap-align: start;
+    }
+    .artigos .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card-title {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+   <!-- Menu responsivo -->
+   <header>
+    <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <img  src="img/logo-ft.png" alt="some text" width=100  height=40 style="margin-top: 5px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Roubbies</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="inicio.html">Roubbies</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="rotina.html">Rotina</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="notas.html">Notas</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="agenda.html">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: black;" class="nav-link" href="login.html">Login</a>
+              </li>
             </ul>
-            <form class="ps-lg-5"><a class="btn btn-light order-1 order-lg-0" href="#!">login
-                <svg class="bi bi-person-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
-                </svg></a></form>
           </div>
         </div>
-      </nav>
-      <section id="home">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/hero.png);background-position:center;background-size:cover;">
+      </div>
+    </nav>
+  </header>
+  <hr>
+  <!-- Corpo da página -->
+  <main>
+    <!-- Introdução e botão para teste de hobbies -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+      <img class="img-fluid" src="#" alt="">
+      <h1 class="display-4 fw-normal">Descubra o Poder dos Hobbies</h1>
+      <p class="lead fw-normal">Roubbies é o seu parceiro definitivo para uma vida mais equilibrada e feliz. Com recomendações personalizadas de hobbies e uma organização flexível de rotinas, você pode encontrar o equilíbrio perfeito entre trabalho e lazer.</p>
+      <a class="btn btn-primary" href="questionario.html">Descubra um novo hobbie</a>
+    </div>
+    <!-- 3 pilares de saúde -->
+    <div class="container card-container">
+      <div class="card" id="espiritualidade">
+        <img src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/16439.png" alt="Espiritualidade">
+        <button onclick="showMethods('Espiritualidade')">Espiritualidade</button>
+      </div>
+      <div class="card" id="emotional">
+        <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/6563627-emocional-maturidade-black-glifo-icone-capacidade-de-controlar-e-gerenciar-emocoes-confianca-e-responsabilidade-madura-mentalidade-silhueta-simbolo-em-espaco-branco-ilustracao-isolada-vetor.jpg" alt="Emocional">
+        <button onclick="showMethods('Emocional')">Emocional</button>
+      </div>
+      <div class="card" id="social">
+        <img src="https://cdn-icons-png.flaticon.com/512/3285/3285177.png" alt="Social">
+        <button onclick="showMethods('Social')">Social</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="methods-list"></div>
+      </div>
+    </div>
+    <!-- Seção de artigos -->
+    <div class="container text-center my-5">
+      <div class="artigos-container">
+        <div class="card artigos">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
+          <h5 class="card-title">Saiba como é bom meditar</h5>
         </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row align-items-center min-vh-50 min-vh-sm-75">
-            <div class="col-md-5 col-lg-6 order-0 order-md-1"><img class="w-100" src="assets/img/illustrations/hero-header.png" alt="..." /></div>
-            <div class="col-md-7 col-lg-6 text-md-start text-center">
-              <h1 class="text-light fs-md-5 fs-lg-6">Priorize Sua Saúde Mental</h1>
-              <p class="text-light">Encontre Equilíbrio nos Hobbies e Momentos de Lazer</p><a class="btn btn-primary" href="#" role="button">Descubra como podemos ajudar!</a>
-            </div>
-          </div>
+        <div class="card artigos">
+          <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+          <h5 class="card-title">Exercícios para iniciantes
+          </h5>
         </div>
-      </section>
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-8">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto">
-              <h2>Sabia que os Hobbies Podem Reduzir o Estresse?</h2>
-              <p class="mb-4">Com todo o corre-corre da vida moderna, nossa saúde mental às vezes fica em segundo plano. A ansiedade e a depressão estão em alta, mas não se preocupe, estamos aqui para ajudar!</p>
-            </div>
-          </div>
-          <div class="row align-items-center mt-5">
-            <div class="col-md-5 col-lg-6 order-md-1 order-0"><img class="w-100" src="assets/img/gallery/join-us.png" alt="" /></div>
-            <div class="col-md-7 col-lg-6 pe-lg-4 pe-xl-7">
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/give-a-care.png" alt="" width="30" />
-                <div class="flex-1">
-                  <h5>Exercício físico </h5>
-                  <p class="text-muted mb-4">Faz você se sentir bem ao liberar substâncias químicas que melhoram o humor e reduzem o estresse.</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/tweak-as-you.png" alt="" width="30" />
-                <div class="flex-1">
-                  <h5>Meditação</h5>
-                  <p class="text-muted mb-4">Ajuda a acalmar a mente e a reduzir a ansiedade, permitindo que você se sinta mais relaxado e em paz.</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/security.png" width="30" alt="..." />
-                <div class="flex-1">
-                  <h5>Leitura</h5>
-                  <p>Ler é uma ótima forma de escapar da realidade, reduzir o estresse e manter a mente ativa.
-
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="card artigos">
+          <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+          <h5 class="card-title">Qual seria a dieta certa?</h5>
         </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-8 bg-soft-primary">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto mb-5">
-              <h2>Don't know where to start from?</h2>
-              <p class="mb-5">A pressão do trabalho, preocupações financeiras, relacionamentos tumultuados e até mesmo a constante presença das redes sociais podem nos deixar ansiosos e tristes. Organizar sua vida pode trazer uma sensação de controle e tranquilidade.Experimente nosso app para uma vida mais organizada!
-
-              </p>
-            </div>
+          <div class="card artigos">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
+            <h5 class="card-title">Saiba como é bom meditar</h5>
           </div>
-          <div class="row h-100">
-            <div class="col-md-6 mb-5 mb-md-0 h-100">
-              <div class="card card-span bg-primary h-100">
-                <div class="card-body p-4">
-                  <div class="d-flex justify-content-between"><img class="mb-3" src="assets/img/icons/rocket.png" height="80" alt="..." /><img src="assets/img/icons/clouds-1.png" height="90" alt="..." /></div>
-                  <h5 class="text-light">PLANING TO BUILD A WEBSITE</h5>
-                  <p class="text-light lh-lg">Procurar ajuda profissional, seja terapia ou medicação, pode ser um primeiro passo importante. Além disso, cultivar hábitos saudáveis, como exercícios regulares, sono adequado e alimentação balanceada, pode fazer uma grande diferença.</p>
-                  <div class="text-end"><a class="btn btn-light" href="#" role="button">Priorize sua saúde mental! Descubra como nosso app pode ajudar.
-                      <svg class="bi bi-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                      </svg></a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 h-100">
-              <div class="card bg-secondary card-span h-100">
-                <div class="card-body p-4">
-                  <div class="d-flex justify-content-between"><img class="mb-3" src="assets/img/icons/servion.png" height="80" alt="..." /><img src="assets/img/icons/logos.png" height="90" alt="..." /></div>
-                  <h5 class="text-light">Organize Sua Rotina</h5>
-                  <p class="text-light lh-lg">A desordem e a falta de planejamento podem aumentar o estresse e a sensação de sobrecarga. Organizar sua vida, seja sua agenda, espaço físico ou tarefas diárias, pode trazer uma sensação de controle e tranquilidade.</p>
-                  <div class="text-end"><a class="btn btn-light" href="#" role="button">Experimente nosso app para uma vida mais organizada!
-                      <svg class="bi bi-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                      </svg></a></div>
-                </div>
-              </div>
-            </div>
+          <div class="card artigos">
+            <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+            <h5 class="card-title">Exercícios para iniciantes
+            </h5>
           </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-6" id="pricingTable">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto mb-5">
-              <h2>Voce nao irá se arrepender de usar nosso app houbbies</h2>
-              <p class="mb-5">Alguns recursos e conselhos, tá?</p>
-            </div>
+          <div class="card artigos">
+            <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+            <h5 class="card-title">Qual seria a dieta certa?</h5>
           </div>
-          <div class="row h-100">
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/shared-hosting.png" alt="..." />
-                    <h5 class="my-3">Apoio Profissional</h5>
-                    <ul class="list-unstyled">
-                      <li>Increase the rank of you</li>
-                      <li>website by the higher speed</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Saiba mais</p>
-                </div>
-              </div>
+            <div class="card artigos">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_gp1SQ0ltdkcTVxY-p_mYy6Vn0gQ4bNdAw&s" class="card-img-top" alt="Foto de um homem meditando">
+              <h5 class="card-title">Saiba como é bom meditar</h5>
             </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/vpn-hosting.png" alt="..." />
-                    <h5 class="my-3">Comunidade de Apoio</h5>
-                    <ul class="list-unstyled">
-                      <li>Be able to conceal your ID </li>
-                      <li>whenever needed</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Saiba mais </p>
-                </div>
-              </div>
+            <div class="card artigos">
+              <img src="https://www.psicologosberrini.com.br/wp-content/uploads/relacao-entre-saude-mental-e-fisica-1024x761.jpg" class="card-img-top" alt="Qual exercício para iniciante?">
+              <h5 class="card-title">Exercícios para iniciantes
+              </h5>
             </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/cloud-hosting.png" alt="..." />
-                    <h5 class="my-3">Organização</h5>
-                    <ul class="list-unstyled">
-                      <li>Utilize nossas ferramentas de planejamento e organização para gerenciar sua rotina de estudos, compromissos e atividades de lazer, garantindo mais eficiência e menos estresse.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Experimente ter uma vida mais organizada </p>
-                </div>
-              </div>
+            <div class="card artigos">
+              <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/06/29/istock-1243468371-us2zjfcaau5v.jpg" class="card-img-top" alt="Qual seria a dieta certa">
+              <h5 class="card-title">Qual seria a dieta certa?</h5>
             </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/wp-hosting.png" alt="..." />
-                    <h5 class="my-3">Acompanhamento de registros</h5>
-                    <ul class="list-unstyled">
-                      <li>acompanhamento em áreas fundamentais da saúde, como espiritualidade e emocional. Os usuários poderão registrar e monitorar suas atividades nessas áreas para melhorar seu bem-estar geral.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Na aba de rotinas </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-     
-
-      <section class="py-0 py-xxl-6" id="help">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/footer-bg.png);background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-          <div class="row min-vh-75 min-vh-xl-50 pt-10">
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">HOSTING</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Shared Hosting</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Apoio Profissional</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Cloud Hosting</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Wordpress Hosting</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">FEATURES</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Beginner Guide</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Move to Servion</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Website Builder</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Tools and Resources</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">SUPPORT</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Help Center</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Submit a Ticket</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Contact Us</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">WE ACCEPT</h5>
-              <ul class="list-unstyled list-inline mb-6 mb-md-0">
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/visa.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/master-card.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/union-pay.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/express.png" width="50" alt="..." /></a></li>
-              </ul>
-            </div>
-          </div>
-          <hr />
-          <div class="row flex-center pb-3">
-            <div class="col-md-6 order-0">
-              <p class="text-200 text-center text-md-start">All rights Reserved &copy; Your Company, 2021</p>
-            </div>
-            <div class="col-md-6 order-1">
-              <p class="text-200 text-center text-md-end"> Made with&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#A8B7FF" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="text-200 fw-bold" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-
-
-
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="vendors/fontawesome/all.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap" rel="stylesheet">
-  </body>
-
+        
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const pillars = {
+      "Espiritualidade": ["Ler um livro", "Meditar", "Rezar"],
+      "Emocional": ["Respiração profunda", "Jornalizar", "Fazer algo criativo"],
+      "Social": ["Conversar com amigos", "Participar de eventos", "Ajudar alguém"]
+    };
+    function showMethods(pillar) {
+      const modal = document.getElementById("modal");
+      const modalTitle = document.getElementById("modal-title");
+      const methodsList = document.getElementById("methods-list");
+      modalTitle.innerText = `Escolha um método para ${pillar}`;
+      methodsList.innerHTML = "";
+      pillars[pillar].forEach(method => {
+          const methodButton = document.createElement("button");
+          methodButton.innerText = method;
+          methodButton.onclick = () => alert(`Você escolheu: ${method}`);
+          methodsList.appendChild(methodButton);
+      });
+      modal.style.display = "block";
+    }
+    function closeModal() {
+      const modal = document.getElementById("modal");
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("modal");
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+    }
+  </script>
+  <!-- Rodapé -->
+<footer class="text-center py-3">
+  <p>Roubbies &copy; 2024 - Todos os direitos reservados</p>
+</footer>
+</body>
 </html>
+ 414 changes: 0 additions & 414 deletion
