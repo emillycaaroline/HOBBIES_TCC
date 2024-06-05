@@ -1,0 +1,52 @@
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.text-200.text-decoration-none(href='#!')
+        =item
+
+mixin Footer
+  section#help.py-0.py-xxl-6
+    +Background({image: `${CWD}assets/img/gallery/footer-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: '' })
+    .container
+      .row.min-vh-75.min-vh-xl-50.pt-10
+        .col-6.col-md-4.col-xl-3.mb-3
+          h5.lh-lg.fw-bold.text-white HOSTING
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('Shared Hosting','VPS Hosting','Cloud Hosting','Wordpress Hosting')
+        .col-6.col-md-4.col-xl-3.mb-3
+          h5.lh-lg.fw-bold.text-white FEATURES
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('Beginner Guide','Move to Servion','Website Builder','Tools and Resources')
+
+        .col-6.col-md-4.col-xl-3.mb-3
+          h5.lh-lg.fw-bold.text-white SUPPORT
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('Help Center','Submit a Ticket','Contact Us','Blog')  
+        .col-xl-3.mb-3
+          h5.lh-lg.fw-bold.text-white WE ACCEPT
+          ul.list-unstyled.list-inline.mb-6.mb-md-0
+            li.list-inline-item.mr-2
+              a.text-decoration-none(href='#!')
+                img.list-social-icon(src=`${CWD}assets/img/gallery/visa.png` width="50" alt='...')
+            li.list-inline-item.mr-2
+              a.text-decoration-none(href='#!')
+                img.list-social-icon(src=`${CWD}assets/img/gallery/master-card.png` width="50" alt='...')
+            li.list-inline-item.mr-2
+              a.text-decoration-none(href='#!')
+                img.list-social-icon(src=`${CWD}assets/img/gallery/union-pay.png` width="50" alt='...')
+            li.list-inline-item
+              a.text-decoration-none(href='#!')
+                img.list-social-icon(src=`${CWD}assets/img/gallery/express.png` width="50" alt='...')       
+      hr    
+      .row.flex-center.pb-3
+        .col-md-6.order-0 
+          p.text-200.text-center.text-md-start All rights Reserved &copy;  Your Company, 2021
+        .col-md-6.order-1
+          p.text-200.text-center.text-md-end  Made with&nbsp;
+            svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='#A8B7FF' viewBox='0 0 16 16')
+              path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+            |&nbsp;by&nbsp;
+            a(href='https://themewagon.com/' target='_blank').text-200.fw-bold ThemeWagon 
+    
+      

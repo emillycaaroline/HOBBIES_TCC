@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,10 +7,10 @@ body {
 }
 
  .t-login { 
-  width: 150%;
-  max-width: 300px;
+  width: 90%;
+  max-width: 250px;
   padding: 30px;
-  background-color:#6F90B4;
+  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
   border-radius: 1px;
   border-color: black;
   border-radius: 30px;
@@ -21,14 +20,14 @@ body {
 }
 h1{
   text-align: center;
-  color: white;
+  color: black;
 }
 
 p{
-  color: white;
+  color: black;
 }
 .t-login {
-  color: white;
+  color: black;
 }
 
 .login-title {
@@ -51,22 +50,25 @@ p{
   font-size: 16px;
   border: none; 
   border-radius: 13px;
-  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
+  background: #fff; 
   margin-bottom: 10px;
   
 }
 .btn-primary {
-  background-color:#9CC1A9;
-  border: none; 
+  background-color:#82a6cc;
+  border: solid  #82a6cc; 
   width: 100%;
   padding: 10px;
   font-size: 16px;
   border-radius: 13px;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 
 .btn-primary:hover {
  
-  background-color: #DEC78C;
+  background-color: #9CC1A9;
+}
+a{
+  color: black;
 }
