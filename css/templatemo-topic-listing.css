@@ -1153,3 +1153,45 @@ blockquote {
   }
 }
 
+
+
+
+/* Botão de login/Cadastro */
+
+.nav-menu {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o preenchimento */
+  margin: 0; /* Remove a margem */
+}
+
+.nav-menu .nav-item {
+  margin: 0; /* Remove a margem dos itens de navegação */
+}
+
+.nav-menu .nav-link {
+  font-size: 18px; /* Altere este valor para ajustar o tamanho do texto do link de navegação */
+}
+
+.nav-menu .dropdown-menu {
+  list-style-type: none; /* Remove os marcadores de lista dos itens do dropdown */
+  padding: 0; /* Remove o preenchimento */
+  margin: 0; /* Remove a margem */
+  font-size: 16px; /* Altere este valor para ajustar o tamanho do texto do menu suspenso */
+}
+
+.nav-menu .dropdown-menu .dropdown-item {
+  margin: 0; /* Remove a margem dos itens do dropdown */
+}
+
+.navbar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Defina a largura desejada */
+  height: 40px; /* Defina a altura desejada */
+  border-radius: 30px; /* Torna a borda arredondada para criar um círculo */
+  border: 1px solid black; /* Borda ao redor do círculo */
+  font-size: 18px; /* Ajuste o tamanho do ícone dentro do círculo */
+  text-align: center; /* Centraliza o texto/ícone dentro do círculo */
+}
+
