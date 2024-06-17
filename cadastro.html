@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+<script src="../assets/js/color-modes.js"></script>     
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="css/cadlog.css">
+</head>
+<body>
+  <form class="t-login mx-auto" id="cadastroForm" action="/processarcad" method="post" onsubmit="return processarcad()">
+       
+        <h1 id="camp-form" class="h3 mb-3 fw-normal">Criar nova<br>Conta</h1>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>  
+        <div class="form-floating">
+            <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="usuario" placeholder="Nome de usuário">
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="senha" placeholder="Senha">
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Cadastre-se</button>
+        <p>Tens uma conta? <a href="login.html">Inicia sessão</a><br></p>
+    </form>
+
+    <script>
+      function processarcad() {
+          // Pega os valores dos campos
+          var email = document.getElementById('email').value;
+          var nome = document.getElementById('nome').value;
+          var usuario = document.getElementById('usuario').value;
+          var senha = document.getElementById('senha').value;
+
+  
+          // Verifica se os campos estão preenchidos
+          if (email === '' || nome === '' || usuario === '' || senha === '') {
+              alert("Por favor, preencha todos os campos.");
+              return false; 
+          } else {
+              console.log("Email:", email);
+              console.log("Senha:", senha);
+              console.log("Nome:", nome);
+              console.log("Usuário:", usuario);
+  
+               // Redireciona para a página inicial
+               window.location.href = "index.html"; // Substitua "index.html" pelo URL da sua página inicial
+
+// Retorna false para impedir o envio do formulário, já que você está redirecionando o usuário
+return false;
+          }
+      }
+  </script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>
+

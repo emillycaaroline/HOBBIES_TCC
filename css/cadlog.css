@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+ .t-login { 
+  width: 90%;
+  max-width: 250px;
+  padding: 30px;
+  background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
+  border-radius: 1px;
+  border-color: black;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  
+}
+h1{
+  text-align: center;
+  color: black;
+}
+
+p{
+  color: black;
+}
+.t-login {
+  color: black;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+ 
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #fff;
+}
+
+.form-control {
+  width: 93%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; 
+  border-radius: 13px;
+  background: #fff; 
+  margin-bottom: 10px;
+  
+}
+.btn-primary {
+  background-color:#82a6cc;
+  border: solid  #82a6cc; 
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 13px;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+ 
+  background-color: #9CC1A9;
+}
+a{
+  color: black;
+}
