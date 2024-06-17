@@ -1,309 +1,778 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
+        <title>Topic Listing Bootstrap 5 Template</title>
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>Servion | Landing, Responsive &amp; Business Templatee</title>
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
-  #top > nav {
-  background-color: blue;
-  padding: 10px;
-}
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-</style>
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="servion-v1.0.0/assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="servion-v1.0.0/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="servion-v1.0.0/assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="servion-v1.0.0/assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="servion-v1.0.0/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="servion-v1.0.0\src\scss\_bootstrap.scss">
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="servion-v1.0.0/" rel="stylesheet" />
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-  </head>
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+<!--
 
+TemplateMo 590 topic listing
 
-  <body>
+https://templatemo.com/tm-590-topic-listing
 
-    <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4 k" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" height="24" alt="..." /></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"> </span>
-          </button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="rotina">Rotina</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#notas">Notas</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#agenda">Agenda</a></li>
-              <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#sobre">Sobre</a></li>
-            </ul>
-            <form class="ps-lg-5">
-              <a class="btn btn-light order-1 order-lg-0" href="#!">login
-                <svg class="bi bi-person-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
-                </svg>
-              </a>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <section id="home">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/hero.png);background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
+-->
+    </head>
+    
+    <body id="top">
 
-        <div class="container">
-          <div class="row align-items-center min-vh-50 min-vh-sm-75">
-            <div class="col-md-5 col-lg-6 order-0 order-md-1"><img class="w-100" src="assets/img/illustrations/hero-header.png" alt="..." /></div>
-            <div class="col-md-7 col-lg-6 text-md-start text-center">
-              <h1 class="text-light fs-md-5 fs-lg-6">Priorize Sua Saúde Mental</h1>
-              <p class="text-light">Encontre Equilíbrio nos Hobbies e Momentos de Lazer</p><a class="btn btn-primary" href="#" role="button">Descubra como podemos ajudar!</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pt-8">
+        <main>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto">
-              <h2>Sabia que os Hobbies Podem Reduzir o Estresse?</h2>
-              <p class="mb-4">Com todo o corre-corre da vida moderna, nossa saúde mental às vezes fica em segundo plano. A ansiedade e a depressão estão em alta, mas não se preocupe, estamos aqui para ajudar!</p>
-            </div>
-          </div>
-          <div class="row align-items-center mt-5">
-            <div class="col-md-5 col-lg-6 order-md-1 order-0"><img class="w-100" src="assets/img/gallery/join-us.png" alt="" /></div>
-            <div class="col-md-7 col-lg-6 pe-lg-4 pe-xl-7">
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/give-a-care.png" alt="" width="30" />
-                <div class="flex-1">
-                  <h5>Exercício físico </h5>
-                  <p class="text-muted mb-4">Faz você se sentir bem ao liberar substâncias químicas que melhoram o humor e reduzem o estresse.</p>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>Topic</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_3">How it works</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/tweak-as-you.png" alt="" width="30" />
-                <div class="flex-1">
-                  <h5>Meditação</h5>
-                  <p class="text-muted mb-4">Ajuda a acalmar a mente e a reduzir a ansiedade, permitindo que você se sinta mais relaxado e em paz.</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-start"><img class="me-4" src="assets/img/icons/security.png" width="30" alt="..." />
-                <div class="flex-1">
-                  <h5>Leitura</h5>
-                  <p>Ler é uma ótima forma de escapar da realidade, reduzir o estresse e manter a mente ativa.
+            </nav>
+            
 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pt-8 bg-soft-primary">
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto mb-5">
-              <h2>Don't know where to start from?</h2>
-              <p class="mb-5">A pressão do trabalho, preocupações financeiras, relacionamentos tumultuados e até mesmo a constante presença das redes sociais podem nos deixar ansiosos e tristes. Organizar sua vida pode trazer uma sensação de controle e tranquilidade.Experimente nosso app para uma vida mais organizada!
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
 
-              </p>
-            </div>
-          </div>
-          <div class="row h-100">
-            <div class="col-md-6 mb-5 mb-md-0 h-100">
-              <div class="card card-span bg-primary h-100">
-                <div class="card-body p-4">
-                  <div class="d-flex justify-content-between"><img class="mb-3" src="assets/img/icons/rocket.png" height="80" alt="..." /><img src="assets/img/icons/clouds-1.png" height="90" alt="..." /></div>
-                  <h5 class="text-light">PLANING TO BUILD A WEBSITE</h5>
-                  <p class="text-light lh-lg">Procurar ajuda profissional, seja terapia ou medicação, pode ser um primeiro passo importante. Além disso, cultivar hábitos saudáveis, como exercícios regulares, sono adequado e alimentação balanceada, pode fazer uma grande diferença.</p>
-                  <div class="text-end"><a class="btn btn-light" href="#" role="button">Priorize sua saúde mental! Descubra como nosso app pode ajudar.
-                      <svg class="bi bi-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                      </svg></a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 h-100">
-              <div class="card bg-secondary card-span h-100">
-                <div class="card-body p-4">
-                  <div class="d-flex justify-content-between"><img class="mb-3" src="assets/img/icons/servion.png" height="80" alt="..." /><img src="assets/img/icons/logos.png" height="90" alt="..." /></div>
-                  <h5 class="text-light">Organize Sua Rotina</h5>
-                  <p class="text-light lh-lg">A desordem e a falta de planejamento podem aumentar o estresse e a sensação de sobrecarga. Organizar sua vida, seja sua agenda, espaço físico ou tarefas diárias, pode trazer uma sensação de controle e tranquilidade.</p>
-                  <div class="text-end"><a class="btn btn-light" href="#" role="button">Experimente nosso app para uma vida mais organizada!
-                      <svg class="bi bi-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                      </svg></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-      </section>
-      <section class="pt-6" id="pricingTable">
+                            <h6 class="text-center">platform for creatives around the world</h6>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-xxl-5 text-center mx-auto mb-5">
-              <h2>Voce nao irá se arrepender de usar nosso app houbbies</h2>
-              <p class="mb-5">Alguns recursos e conselhos, tá?</p>
-            </div>
-          </div>
-          <div class="row h-100">
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/shared-hosting.png" alt="..." />
-                    <h5 class="my-3">Apoio Profissional</h5>
-                    <ul class="list-unstyled">
-                      <li>Increase the rank of you</li>
-                      <li>website by the higher speed</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Saiba mais</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/vpn-hosting.png" alt="..." />
-                    <h5 class="my-3">Comunidade de Apoio</h5>
-                    <ul class="list-unstyled">
-                      <li>Be able to conceal your ID </li>
-                      <li>whenever needed</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Saiba mais </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/cloud-hosting.png" alt="..." />
-                    <h5 class="my-3">Organização</h5>
-                    <ul class="list-unstyled">
-                      <li>Utilize nossas ferramentas de planejamento e organização para gerenciar sua rotina de estudos, compromissos e atividades de lazer, garantindo mais eficiência e menos estresse.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Experimente ter uma vida mais organizada </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-3">
-              <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
-                <div class="card-body">
-                  <div class="text-center"><img src="assets/img/icons/wp-hosting.png" alt="..." />
-                    <h5 class="my-3">Acompanhamento de registros</h5>
-                    <ul class="list-unstyled">
-                      <li>acompanhamento em áreas fundamentais da saúde, como espiritualidade e emocional. Os usuários poderão registrar e monitorar suas atividades nessas áreas para melhorar seu bem-estar geral.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="border-top bg-white text-center pt-3 pb-0">
-                  <p class="mb-0">Na aba de rotinas </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       
-      </section>
-      <section class="py-0 py-xxl-6" id="help">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/footer-bg.png);background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
+                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bi-search" id="basic-addon1">
+                                        
+                                    </span>
 
-        <div class="container">
-          <div class="row min-vh-75 min-vh-xl-50 pt-10">
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">HOSTING</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Shared Hosting</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Apoio Profissional</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Cloud Hosting</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Wordpress Hosting</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">FEATURES</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Beginner Guide</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Move to Servion</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Website Builder</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Tools and Resources</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-4 col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">SUPPORT</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Help Center</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Submit a Ticket</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Contact Us</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-xl-3 mb-3">
-              <h5 class="lh-lg fw-bold text-white">WE ACCEPT</h5>
-              <ul class="list-unstyled list-inline mb-6 mb-md-0">
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/visa.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/master-card.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/union-pay.png" width="50" alt="..." /></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/gallery/express.png" width="50" alt="..." /></a></li>
-              </ul>
-            </div>
-          </div>
-          <hr />
-          <div class="row flex-center pb-3">
-            <div class="col-md-6 order-0">
-              <p class="text-200 text-center text-md-start">All rights Reserved &copy; Your Company, 2021</p>
-            </div>
-            <div class="col-md-6 order-1">
-              <p class="text-200 text-center text-md-end"> Made with&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#A8B7FF" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="text-200 fw-bold" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script src="/pg/agenda.html"></script>
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="vendors/fontawesome/all.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap" rel="stylesheet">
-  </body>
+                                    <button type="submit" class="form-control">Search</button>
+                                </div>
+                            </form>
+                        </div>
 
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="featured-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="topics-detail.html">
+                                    <div class="d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Web Design</h5>
+
+                                            <p class="mb-0">When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+                                        </div>
+
+                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                    </div>
+
+                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="custom-block custom-block-overlay">
+                                <div class="d-flex flex-column h-100">
+                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-overlay-text d-flex">
+                                        <div>
+                                            <h5 class="text-white mb-2">Finance</h5>
+
+                                            <p class="text-white">Topic Listing Template includes homepage, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
+
+                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                        </div>
+
+                                        <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                    </div>
+
+                                    <div class="social-share d-flex">
+                                        <p class="text-white me-4">Share:</p>
+
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>Designms-auto"></a>
+                                    </div>
+
+                                    <div class="section-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">Design
+
+                        <div class="col-12 text-center">
+                            <h2 class="mb-4">Browse Topics</h1>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Design</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Marketing</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Finance</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Music</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Education</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Web Design</h5>
+
+                                                            <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Graphic</h5>
+
+                                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">75</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Logo Design</h5>
+
+                                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-design rounded-pill ms-auto">100</span>
+                                                    </div>
+
+                                                    <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Advertising</h5>
+
+                                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                            </div>
+
+                                                            <span class="badge bg-advertising rounded-pill ms-auto">30</span>
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Video Content</h5>
+
+                                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                            </div>
+
+                                                            <span class="badge bg-advertising rounded-pill ms-auto">65</span>
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                    <a href="topics-detail.html">
+                                                        <div class="d-flex">
+                                                            <div>
+                                                                <h5 class="mb-2">Viral Tweet</h5>
+
+                                                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                            </div>
+
+                                                            <span class="badge bg-advertising rounded-pill ms-auto">50</span>
+                                                        </div>
+
+                                                        <img src="images/topics/undraw_viral_tweet_gndb.png" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  </div>
+
+                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Investment</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-finance rounded-pill ms-auto">30</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Finance_re_gnv2.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block custom-block-overlay">
+                                                <div class="d-flex flex-column h-100">
+                                                    <img src="images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg" class="custom-block-image img-fluid" alt="">
+
+                                                    <div class="custom-block-overlay-text d-flex">
+                                                        <div>
+                                                            <h5 class="text-white mb-2">Finance</h5>
+
+                                                            <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis</p>
+
+                                                            <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                                        </div>
+
+                                                        <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                                    </div>
+
+                                                    <div class="social-share d-flex">
+                                                        <p class="text-white me-4">Share:</p>
+
+                                                        <ul class="social-icon">
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                                            </li>
+
+                                                            <li class="social-icon-item">
+                                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                                    </div>
+
+                                                    <div class="section-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Composing Song</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Compose_music_re_wpiw.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Online Music</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_happy_music_g6wc.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Podcast</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-music rounded-pill ms-auto">20</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Podcast_audience_re_4i5q.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Graduation</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-education rounded-pill ms-auto">80</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Graduation_re_gthn.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Educator</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-education rounded-pill ms-auto">75</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Educator_re_ju47.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="timeline-section section-padding" id="section_3">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">How does it work?</h1>
+                        </div>
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="timeline-container">
+                                <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+                                    <div class="list-progress">
+                                        <div class="inner"></div>
+                                    </div>
+
+                                    <li>
+                                        <h4 class="text-white mb-3">Search your favourite topic</h4>
+
+                                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cumque magnam? Sequi, cupiditate quibusdam alias illum sed esse ad dignissimos libero sunt, quisquam numquam aliquam? Voluptas, accusamus omnis?</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-search"></i>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <h4 class="text-white mb-3">Bookmark &amp; Keep it for yourself</h4>
+
+                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis est vel quo, nihil repellat quia velit error modi earum similique odit labore. Doloremque, repudiandae?</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-bookmark"></i>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <h4 class="text-white mb-3">Read &amp; Enjoy</h4>
+
+                                        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut ducimus beatae id? Quam culpa deleniti officiis autem?</p>
+
+                                        <div class="icon-holder">
+                                          <i class="bi-book"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center mt-5">
+                            <p class="text-white">
+                                Want to learn more?
+                                <a href="#" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="faq-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Frequently Asked Questions</h2>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-lg-5 col-12">
+                            <img src="images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
+                        </div>
+
+                        <div class="col-lg-6 col-12 m-auto">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is Topic Listing?
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to redistribute this template</strong> on any other template collection website without our permission. Please contact TemplateMo for more detail. Thank you.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How to find a topic?
+                                    </button>
+                                    </h2>
+
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            You can search on Google with <strong>keywords</strong> such as templatemo portfolio, templatemo one-page layouts, photography, digital marketing, etc.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Does it need to paid?
+                                    </button>
+                                    </h2>
+
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section section-padding section-bg" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="mb-5">Get in touch</h2>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.065641062665!2d-122.4230416990949!3d37.80335401520422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e1!3m2!1sen!2sth!4v1684340239744!5m2!1sen!2sth" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                            <h4 class="mb-3">Head office</h4>
+
+                            <p>Bay St &amp;, Larkin St, San Francisco, CA 94109, United States</p>
+
+                            <hr>
+
+                            <p class="d-flex align-items-center mb-1">
+                                <span class="me-2">Phone</span>
+
+                                <a href="tel: 305-240-9671" class="site-footer-link">
+                                    305-240-9671
+                                </a>
+                            </p>
+
+                            <p class="d-flex align-items-center">
+                                <span class="me-2">Email</span>
+
+                                <a href="mailto:info@company.com" class="site-footer-link">
+                                    info@company.com
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                            <h4 class="mb-3">Dubai office</h4>
+
+                            <p>Burj Park, Downtown Dubai, United Arab Emirates</p>
+
+                            <hr>
+
+                            <p class="d-flex align-items-center mb-1">
+                                <span class="me-2">Phone</span>
+
+                                <a href="tel: 110-220-3400" class="site-footer-link">
+                                    110-220-3400
+                                </a>
+                            </p>
+
+                            <p class="d-flex align-items-center">
+                                <span class="me-2">Email</span>
+
+                                <a href="mailto:info@company.com" class="site-footer-link">
+                                    info@company.com
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-back"></i>
+                            <span>Topic</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">How it works</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">FAQs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                305-240-9671
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                info@company.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution <a href="https://themewagon.com">ThemeWagon</a></p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
 </html>
