@@ -1,0 +1,58 @@
+/* menu */
+.navbar {
+    background-color: #e4edff;
+    
+  }
+  
+  /* links do menu */
+  .nav-link {
+    color: #FFFFFF;
+  }
+ /* -------------------------------------------------------------- */
+/* menu para celular */
+.offcanvas-body {
+    background-color: #e4edff;
+ }
+
+ .offcanvas-header {
+   background-color: #6e98c4;
+ }
+
+ .offcanvas-title {
+   color: #FFFFFF;
+ }
+
+ .navbar-nav .nav-link {
+   color: #FFFFFF;
+ }
+
+ .btn-close {
+   color: #FFFFFF;
+ }
+
+  /* -------------------------------------------------------------- */ 
+  
+  /* Estilo do corpo */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #e4edff 0%, #f5fdfb 100%); 
+    
+    margin: 0;
+  }
+   /* -------------------------------------------------------------- */
+  /* botão */
+  .btn-primary {
+    background-color: #82a6cc;
+    color: #FFFFFF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #65896C; 
+  }
+   /* -------------------------------------------------------------- */
+  footer {
+    background-color: #9CC1A9; 
+    color: #FFFFFF;
+  }
+  
+  

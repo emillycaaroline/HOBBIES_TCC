@@ -1,0 +1,8 @@
+mixin Feature(config) 
+  .row.flex-center
+    .col-md-6(class=`${config.order}`)
+      img.w-100(src=`${CWD}assets/img/gallery/${config.image}`   alt='...')
+    .col-md-6.gx-xl-9
+      h1.fs-lg-6.my-4!=config.title
+      p.fs-1!=config.text
+      a.stretched-link(href='#!') Experienced team
